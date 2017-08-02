@@ -1,0 +1,24 @@
+{
+  "name": "React-sketch-design-template",
+  "private": true,
+  "main": "react-sketch.sketchplugin",
+  "manifest": "src/manifest.json",
+  "scripts": {
+    "build": "skpm build",
+    "watch": "skpm build --watch",
+    "render": "skpm build --watch --run",
+    "render:once": "skpm build --run",
+    "link-plugin": "skpm link"
+  },
+  "author": "Marie Lu Vinh <marie@futurice.com>",
+  "license": "MIT",
+  "dependencies": {
+    "chroma-js": "^1.2.2",
+    "react": "^15.4.2",
+    "react-sketchapp": "^0.11.0",
+    "react-test-renderer": "^15.4.2"
+  },
+  "devDependencies": {
+    "skpm": "^0.10.2"
+  }
+}
