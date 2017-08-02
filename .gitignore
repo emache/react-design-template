@@ -1,0 +1,8 @@
+node_modules/
+.sketchplugin/
+
+# misc
+*.sublime-project
+*.sublime-workspace
+.DS_Store
+
