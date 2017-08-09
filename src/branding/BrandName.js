@@ -52,7 +52,7 @@ const typeSizes = {
     xl: baseFontSize * 1.5, // 24
     xxl: baseFontSize * 2 , // 32
     xxxl: baseFontSize * 2.625, // 42
-    display: baseFontSize * 48 // 48
+    display: baseFontSize * 3 // 48
 }
 
 // Spacing, based off the base font-size.
