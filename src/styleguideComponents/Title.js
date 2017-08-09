@@ -1,20 +1,28 @@
 import React from 'react';
 import { Text, View } from 'react-sketchapp';
-import { annotations } from '../branding/Annotations';
-import { spacing } from '../branding/BrandName';
+import { spacing, colors, typeSizes } from '../branding/BrandName';
 
 const Title = ({children }) => (
-    <View
+    <View name="Title"
         style={{
-            width: 1000,
+            width: 1200,
             paddingBottom: spacing.s,
-            marginBottom: spacing.xl,
+            marginBottom: spacing.s,
+            marginTop: spacing.m,
             borderBottomWidth: 2,
-            borderColor: '#000'
+            borderColor: colors.grey70
         }}
     >
-        <Text style={annotations.header} name="Header">
+        <Text style={{
+            color: colors.grey70,
+            fontWeight: 'bold',
+            fontSize: typeSizes.xl,
+            fontFamily: 'Arial'
+            }}
+            name="Title-text">
+
             {children}
+
         </Text>
     </View>
 );

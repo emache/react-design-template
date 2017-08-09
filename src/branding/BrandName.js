@@ -65,12 +65,14 @@ export const fonts = {
         fontSize: typeSizes.display,
         fontFamily: fontFamilies.display,
         fontWeight: fontWeights.bold,
+        marginBottom: spacing.m
     },
     'title-1': {
         color: colors.primary,
         fontSize: typeSizes.xxxl,
         fontFamily: fontFamilies.display,
         fontWeight: fontWeights.bold,
+        marginBottom: spacing.m
     },
     'title-2': {
         color: colors.primary,
@@ -78,30 +80,36 @@ export const fonts = {
         fontFamily: fontFamilies.display,
         fontWeight: fontWeights.bold,
         lineHeight: 36,
+        marginBottom: spacing.s
     },
     'title-3': {
         color: colors.primary,
         fontSize: typeSizes.xl,
         fontFamily: fontFamilies.body,
         fontWeight: fontWeights.regular,
+        marginBottom: spacing.s
     },
     'title-4': {
         color: colors.primary,
         fontSize: typeSizes.l,
         fontFamily: fontFamilies.body,
         fontWeight: fontWeights.regular,
+        marginBottom: spacing.xs
     },
     Body: {
         color: colors.primary,
         fontSize: typeSizes.body,
         fontFamily: fontFamilies.body,
         fontWeight: fontWeights.regular,
+        marginBottom: spacing.xs
+
     },
     small: {
         color: colors.secondary,
         fontSize: typeSizes.s,
         fontFamily: fontFamilies.body,
         fontWeight: fontWeights.regular,
+        marginBottom: spacing.xxs
     },
     'extra-small': {
         color: colors.secondary,

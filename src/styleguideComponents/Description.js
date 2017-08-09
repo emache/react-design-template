@@ -1,11 +1,17 @@
 import React from 'react';
 import { Text } from 'react-sketchapp';
-import { annotations } from '../branding/Annotations';
+import { spacing, colors, typeSizes } from '../branding/BrandName';
 
 const Description = ({children }) => (
-  <Text style={annotations.description} name="Description">
+    <Text name="Description" style={{
+        color: colors.grey30,
+        fontWeight: 'regular',
+        fontSize: typeSizes.body,
+        fontFamily: 'Arial'
+        }}
+    >
         {children}
-  </Text>
+    </Text>
 );
 
 export default Description;

@@ -11,13 +11,19 @@ import Section from './styleguideComponents/Section';
 import { fonts, colors } from './branding/BrandName';
 
 const Document = () => (
-  <View>
+  <View name="document">
     <Title>Styleguide example</Title>
+    <Description>
+        Example styleguide generated using React-Sketchapp from Airbnb.
+    </Description>
+
     <Section title="Color Palette">
-        <Palette color={colors} name="palette" />
+        <Palette color={colors} name="Palette" />
     </Section>
-    <TypeGuide textStyle={fonts} name="typography" />
-    <Description>Test Annotation</Description>
+    <Section title="Typography">
+        <Description>Description of typographic styles</Description>
+        <TypeGuide textStyle={fonts} name="typography" />
+    </Section>
   </View>
 );
 

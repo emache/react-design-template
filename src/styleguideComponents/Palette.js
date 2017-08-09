@@ -8,11 +8,13 @@ type P = {
 }
 
 const Palette = ({color}: P) => (
-    <View name='Palette2'
+    <View name='colour-palette'
         style={{
-            width: 500,
+            width: '1200',
             flexWrap: 'wrap',
-            flexDirection: 'row'
+            flexDirection: 'row',
+            paddingLeft: 0,
+            paddingRight: 0
         }}
     >
         {Object.keys(color).map(name =>
