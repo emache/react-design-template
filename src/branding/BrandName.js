@@ -44,7 +44,7 @@ const fontWeights = {
 const baseFontSize = 16
 
 // Sizes
-const typeSizes = {
+export const typeSizes = {
     xs: baseFontSize * 0.625, // 10
     s: baseFontSize * 0.75, // 12
     body: baseFontSize * 0.875, // 14

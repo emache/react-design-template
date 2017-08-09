@@ -5,12 +5,19 @@ import React from 'react';
 import { render, Text, View } from 'react-sketchapp';
 import Palette from './styleguideComponents/Palette';
 import TypeGuide from './styleguideComponents/TypeGuide';
+import Description from './styleguideComponents/Description';
+import Title from './styleguideComponents/Title';
+import Section from './styleguideComponents/Section';
 import { styledColors, fonts } from './branding/BrandName';
 
 const Document = () => (
   <View>
-    <Palette color={styledColors} name="palette" />
+    <Title>Styleguide example</Title>
+    <Section title="Color Palette">
+        <Palette color={styledColors} name="palette" />
+    </Section>
     <TypeGuide textStyle={fonts} name="typography" />
+    <Description>Test Annotation</Description>
   </View>
 );
 
