@@ -15,7 +15,7 @@ const colors = {
     black: brandColors.Black,
     grey70: brandColors.Grey70,
     grey30: brandColors.Grey30,
-    grey10: brandColors.Grey20,
+    grey10: brandColors.Grey10,
     grey03: brandColors.Grey3,
     white: brandColors.White
 };
