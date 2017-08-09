@@ -8,13 +8,13 @@ import TypeGuide from './styleguideComponents/TypeGuide';
 import Description from './styleguideComponents/Description';
 import Title from './styleguideComponents/Title';
 import Section from './styleguideComponents/Section';
-import { styledColors, fonts } from './branding/BrandName';
+import { fonts, colors } from './branding/BrandName';
 
 const Document = () => (
   <View>
     <Title>Styleguide example</Title>
     <Section title="Color Palette">
-        <Palette color={styledColors} name="palette" />
+        <Palette color={colors} name="palette" />
     </Section>
     <TypeGuide textStyle={fonts} name="typography" />
     <Description>Test Annotation</Description>

@@ -3,7 +3,7 @@ import brandColors from './SharedColors';
 
 // Global color names
 // Favor generic names to actual color names.
-const colors = {
+export const colors = {
     primary: brandColors.Night,
     primary_lighter: brandColors.Night_lighter,
     primary_darker: brandColors.Night_darker,
@@ -19,15 +19,6 @@ const colors = {
     grey03: brandColors.Grey3,
     white: brandColors.White
 };
-
-export const styledColors = Object.keys(colors).map( elem =>
-    {
-        return {
-            name: elem,
-            value: colors[elem],
-        }
-    }
-);
 
 // Global font and typography settings
 const fontFamilies = {
