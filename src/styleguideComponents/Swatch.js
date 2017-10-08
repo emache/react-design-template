@@ -1,6 +1,6 @@
 /* @flow */
-import React from 'react';
-import { View } from 'react-sketchapp';
+import React from "react";
+import { View } from "react-sketchapp";
 
 // A color is defined as an object that has
 // - a name
@@ -14,38 +14,40 @@ import { View } from 'react-sketchapp';
 
 const SWATCH_WIDTH = 100;
 
-const Swatch = ({color, name}) => (
-    <View name={`swatch-${name}`} style={{ margin: 50}}>
-        <View name="color-chip"
-              style={{
+const Swatch = ({ color, name }) => (
+    <View name={`swatch-${name}`} style={{ margin: 50 }}>
+        <View
+            name="color-chip"
+            style={{
                 width: SWATCH_WIDTH,
                 height: SWATCH_WIDTH,
-                backgroundColor: color.base,
-        }}>
+                backgroundColor: color.base
+            }}
+        />
+
+        <View
+            style={{
+                width: SWATCH_WIDTH,
+                height: SWATCH_WIDTH / 2,
+                flexDirection: "row"
+            }}
+        >
+            <View
+                style={{
+                    width: SWATCH_WIDTH / 2,
+                    height: SWATCH_WIDTH / 2,
+                    backgroundColor: color.brighter
+                }}
+            />
+
+            <View
+                style={{
+                    width: SWATCH_WIDTH / 2,
+                    height: SWATCH_WIDTH / 2,
+                    backgroundColor: color.darker
+                }}
+            />
         </View>
-
-        <View style={{
-            width: SWATCH_WIDTH,
-            height: SWATCH_WIDTH/2,
-            flexDirection: 'row'
-        }}>
-            <View style={{
-                width: SWATCH_WIDTH/2,
-                height: SWATCH_WIDTH/2,
-                backgroundColor: color.brighter
-            }}>
-
-            </View>
-
-            <View style={{
-                width: SWATCH_WIDTH/2,
-                height: SWATCH_WIDTH/2,
-                backgroundColor: color.darker
-            }}>
-            </View>
-
-        </View>
-
     </View>
 );
 
