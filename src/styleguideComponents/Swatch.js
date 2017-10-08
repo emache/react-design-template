@@ -1,6 +1,6 @@
 /* @flow */
 import React from "react";
-import { View } from "react-sketchapp";
+import { View, Text } from "react-sketchapp";
 
 // A color is defined as an object that has
 // - a name
@@ -15,38 +15,83 @@ import { View } from "react-sketchapp";
 const SWATCH_WIDTH = 100;
 
 const Swatch = ({ color, name }) => (
-    <View name={`swatch-${name}`} style={{ margin: 50 }}>
+    <View
+        name={`swatch-${name}`}
+        style={{
+            margin: 50,
+            borderWidth: 1,
+            borderColor: "#000",
+            width: 300,
+            flexDirection: "row",
+        }}
+    >
         <View
-            name="color-chip"
+            name="color-chips"
             style={{
-                width: SWATCH_WIDTH,
-                height: SWATCH_WIDTH,
-                backgroundColor: color.base
-            }}
-        />
-
-        <View
-            style={{
-                width: SWATCH_WIDTH,
-                height: SWATCH_WIDTH / 2,
-                flexDirection: "row"
+                borderRightColor: "#000",
+                borderRightWidth: 1,
             }}
         >
             <View
+                name="color-base"
                 style={{
-                    width: SWATCH_WIDTH / 2,
-                    height: SWATCH_WIDTH / 2,
-                    backgroundColor: color.brighter
+                    width: SWATCH_WIDTH,
+                    height: SWATCH_WIDTH,
+                    backgroundColor: color.base,
                 }}
             />
 
             <View
                 style={{
-                    width: SWATCH_WIDTH / 2,
+                    width: SWATCH_WIDTH,
                     height: SWATCH_WIDTH / 2,
-                    backgroundColor: color.darker
+                    flexDirection: "row",
                 }}
-            />
+            >
+                <View
+                    style={{
+                        width: SWATCH_WIDTH / 2,
+                        height: SWATCH_WIDTH / 2,
+                        backgroundColor: color.brighter,
+                    }}
+                />
+
+                <View
+                    style={{
+                        width: SWATCH_WIDTH / 2,
+                        height: SWATCH_WIDTH / 2,
+                        backgroundColor: color.darker,
+                    }}
+                />
+            </View>
+        </View>
+        <View
+            name="labels"
+            style={{
+                paddingLeft: 20,
+                paddingTop: 20,
+            }}
+        >
+            <Text
+                style={{
+                    fontColor: "#000",
+                    fontWeight: "bold",
+                    fontSize: 18,
+                    fontFamily: "Arial",
+                }}
+            >
+                {name}
+            </Text>
+            <Text
+                style={{
+                    fontColor: "#000",
+                    fontWeight: "regular",
+                    fontSize: 12,
+                    fontFamily: "Arial",
+                }}
+            >
+                {color.base}
+            </Text>
         </View>
     </View>
 );

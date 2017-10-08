@@ -12,11 +12,11 @@ const colorShades = (baseColor, brightenValue = 2, darkenValue = 3) => {
             .css(),
         toString() {
             return baseColor;
-        }
+        },
     };
 };
 
-const brandColors = {
+export default {
     Night: colorShades("#000"),
     Night_brighter: colorShades("#5A89A8"),
     Night_darker: colorShades("#071F2E"),
@@ -25,12 +25,12 @@ const brandColors = {
     Tomato: colorShades("#E37059"),
     Pear: colorShades("#93DAAB", 1, 1),
     Lemon: colorShades("#F8D61B"),
+    Pink: colorShades("#FF10B6"),
+
     Black: colorShades("#2F3137"),
     Grey70: colorShades("rgba(47,49,55,0.70)"),
     Grey30: colorShades("rgba(47,49,55,0.30)"),
     Grey10: colorShades("rgba(47,49,55,0.10)"),
     Grey3: colorShades("rgba(47,49,55,0.50)"),
-    White: colorShades("#FFFFFF")
+    White: colorShades("#FFFFFF"),
 };
-
-export default brandColors;
