@@ -1,6 +1,7 @@
 /* @flow */
 import React from 'react';
 import { View } from 'react-sketchapp';
+
 // A color is defined as an object that has
 // - a name
 // - a hex value or rgba value
@@ -19,9 +20,32 @@ const Swatch = ({color, name}) => (
               style={{
                 width: SWATCH_WIDTH,
                 height: SWATCH_WIDTH,
-                backgroundColor: color,
+                backgroundColor: color.base,
         }}>
         </View>
+
+        <View style={{
+            width: SWATCH_WIDTH,
+            height: SWATCH_WIDTH/2,
+            flexDirection: 'row'
+        }}>
+            <View style={{
+                width: SWATCH_WIDTH/2,
+                height: SWATCH_WIDTH/2,
+                backgroundColor: color.brighter
+            }}>
+
+            </View>
+
+            <View style={{
+                width: SWATCH_WIDTH/2,
+                height: SWATCH_WIDTH/2,
+                backgroundColor: color.darker
+            }}>
+            </View>
+
+        </View>
+
     </View>
 );
 

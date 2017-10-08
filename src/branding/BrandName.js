@@ -1,3 +1,4 @@
+// @flow
 // Global Design System settings: shared colors, text, spacing, grid.
 import brandColors from './SharedColors';
 
@@ -5,8 +6,6 @@ import brandColors from './SharedColors';
 // Favor generic names to actual color names.
 export const colors = {
     primary: brandColors.Night,
-    primary_lighter: brandColors.Night_lighter,
-    primary_darker: brandColors.Night_darker,
     secondary: brandColors.Peach,
     accent: brandColors.Sur,
     success: brandColors.Pear,
@@ -19,6 +18,9 @@ export const colors = {
     grey03: brandColors.Grey3,
     white: brandColors.White
 };
+
+
+
 
 // Global font and typography settings
 const fontFamilies = {
