@@ -2,31 +2,23 @@
 import tinycolor from "tinycolor2";
 
 const colorShades = (baseColor, lighterColor, darkerColor) => {
-    if (!lighterColor && !darkerColor) {
-        return {
-            base: baseColor,
-            lighter: tinycolor(baseColor)
-                .lighten(10)
-                .toString(),
-            darker: tinycolor(baseColor)
-                .darken(10)
-                .toString()
-        };
-    } else if (!darkerColor) {
-        return {
-            base: baseColor,
-            lighter: lighterColor,
-            darker: tinycolor(baseColor)
-                .darken(10)
-                .toString()
-        };
-    } else {
-        return {
-            base: baseColor,
-            lighter: lighterColor,
-            darker: darkerColor
-        };
+    let lighter, darker;
+    if (!lighterColor) {
+        lighterColor = tinycolor(baseColor)
+            .lighten(10)
+            .toString();
     }
+    if (!darkerColor) {
+        darkerColor = tinycolor(baseColor)
+            .darken(10)
+            .toString();
+    }
+
+    return {
+        base: baseColor,
+        lighter: lighterColor,
+        darker: darkerColor
+    };
 };
 
 export default {
