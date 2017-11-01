@@ -18,10 +18,10 @@ const Swatch = ({ color, name }) => (
     <View
         name={`swatch-${name}`}
         style={{
-            margin: 50,
+            margin: 20,
             borderWidth: 1,
             borderColor: "#000",
-            width: 300,
+            width: 350,
             flexDirection: "row"
         }}
     >
@@ -77,7 +77,8 @@ const Swatch = ({ color, name }) => (
                     fontColor: "#000",
                     fontWeight: "bold",
                     fontSize: 18,
-                    fontFamily: "Arial"
+                    fontFamily: "Arial",
+                    marginBottom: 10
                 }}
             >
                 {name}
@@ -87,15 +88,35 @@ const Swatch = ({ color, name }) => (
                     fontColor: "#000",
                     fontWeight: "regular",
                     fontSize: 12,
+                    fontFamily: "Arial",
+                    marginBottom: 10
+                }}
+            >
+                Base color: {color.base}
+            </Text>
+            <Text
+                style={{
+                    fontColor: "#000",
+                    fontWeight: "regular",
+                    fontSize: 12,
+                    fontFamily: "Arial",
+                    marginBottom: 10
+                }}
+            >
+                {name}.lighter: {color.lighter}
+            </Text>
+            <Text
+                style={{
+                    fontColor: "#000",
+                    fontWeight: "regular",
+                    fontSize: 12,
                     fontFamily: "Arial"
                 }}
             >
-                {color.base}
+                {name}.darker: {color.darker}
             </Text>
         </View>
     </View>
 );
 
 export default Swatch;
-// Label: name
-// Label: color value in rgb or hex
