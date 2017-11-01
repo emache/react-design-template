@@ -22,14 +22,14 @@ const Swatch = ({ color, name }) => (
             borderWidth: 1,
             borderColor: "#000",
             width: 300,
-            flexDirection: "row",
+            flexDirection: "row"
         }}
     >
         <View
             name="color-chips"
             style={{
                 borderRightColor: "#000",
-                borderRightWidth: 1,
+                borderRightWidth: 1
             }}
         >
             <View
@@ -37,7 +37,7 @@ const Swatch = ({ color, name }) => (
                 style={{
                     width: SWATCH_WIDTH,
                     height: SWATCH_WIDTH,
-                    backgroundColor: color.base,
+                    backgroundColor: color.base
                 }}
             />
 
@@ -45,14 +45,14 @@ const Swatch = ({ color, name }) => (
                 style={{
                     width: SWATCH_WIDTH,
                     height: SWATCH_WIDTH / 2,
-                    flexDirection: "row",
+                    flexDirection: "row"
                 }}
             >
                 <View
                     style={{
                         width: SWATCH_WIDTH / 2,
                         height: SWATCH_WIDTH / 2,
-                        backgroundColor: color.brighter,
+                        backgroundColor: color.lighter
                     }}
                 />
 
@@ -60,7 +60,7 @@ const Swatch = ({ color, name }) => (
                     style={{
                         width: SWATCH_WIDTH / 2,
                         height: SWATCH_WIDTH / 2,
-                        backgroundColor: color.darker,
+                        backgroundColor: color.darker
                     }}
                 />
             </View>
@@ -69,7 +69,7 @@ const Swatch = ({ color, name }) => (
             name="labels"
             style={{
                 paddingLeft: 20,
-                paddingTop: 20,
+                paddingTop: 20
             }}
         >
             <Text
@@ -77,7 +77,7 @@ const Swatch = ({ color, name }) => (
                     fontColor: "#000",
                     fontWeight: "bold",
                     fontSize: 18,
-                    fontFamily: "Arial",
+                    fontFamily: "Arial"
                 }}
             >
                 {name}
@@ -87,7 +87,7 @@ const Swatch = ({ color, name }) => (
                     fontColor: "#000",
                     fontWeight: "regular",
                     fontSize: 12,
-                    fontFamily: "Arial",
+                    fontFamily: "Arial"
                 }}
             >
                 {color.base}
