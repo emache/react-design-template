@@ -12,6 +12,14 @@ const colorShades = (baseColor, lighterColor, darkerColor) => {
                 .darken(10)
                 .toString()
         };
+    } else if (!darkerColor) {
+        return {
+            base: baseColor,
+            lighter: lighterColor,
+            darker: tinycolor(baseColor)
+                .darken(10)
+                .toString()
+        };
     } else {
         return {
             base: baseColor,
