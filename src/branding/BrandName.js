@@ -1,6 +1,6 @@
 // @flow
 // Global Design System settings: shared colors, text, spacing, grid.
-import brandColors from "./SharedColors";
+import { brandColors, greyScale } from "./SharedColors";
 
 // Global color names
 // Favor generic names to actual color names.
@@ -11,12 +11,12 @@ export const colors = {
     success: brandColors.Pear,
     warning: brandColors.Lemon,
     failure: brandColors.Tomato,
-    black: brandColors.Black,
-    grey70: brandColors.Grey70,
-    grey30: brandColors.Grey30,
-    grey10: brandColors.Grey10,
-    grey03: brandColors.Grey3,
-    white: brandColors.White
+    black: greyScale.Black,
+    grey70: greyScale.Grey70,
+    grey30: greyScale.Grey30,
+    grey10: greyScale.Grey10,
+    grey03: greyScale.Grey3,
+    white: greyScale.White
 };
 
 // Global font and typography settings

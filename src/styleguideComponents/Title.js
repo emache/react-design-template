@@ -11,12 +11,12 @@ const Title = ({ children }) => (
             marginBottom: spacing.s,
             marginTop: spacing.m,
             borderBottomWidth: 2,
-            borderColor: colors.grey70.base
+            borderColor: colors.grey70
         }}
     >
         <Text
             style={{
-                color: colors.grey70.base,
+                color: colors.grey70,
                 fontWeight: "bold",
                 fontSize: typeSizes.xl,
                 fontFamily: "Arial"

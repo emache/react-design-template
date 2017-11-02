@@ -1,13 +1,13 @@
 /* @flow */
 import React from "react";
 import { View } from "react-sketchapp";
-import Swatch from "./Swatch";
+import SwatchNoShade from "./SwatchNoShade";
 
 type P = {
     name: string
 };
 
-const Palette = ({ color }: P) => (
+const PaletteNoShade = ({ color }: P) => (
     <View
         name="colour-palette"
         style={{
@@ -19,9 +19,9 @@ const Palette = ({ color }: P) => (
         }}
     >
         {Object.keys(color).map(name => (
-            <Swatch color={color[name]} name={name} key={name} />
+            <SwatchNoShade color={color[name]} name={name} key={name} />
         ))}
     </View>
 );
 
-export default Palette;
+export default PaletteNoShade;

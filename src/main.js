@@ -4,12 +4,13 @@
 import React from "react";
 import { render, Text, View, Artboard } from "react-sketchapp";
 import Palette from "./styleguideComponents/Palette";
+import PaletteNoShade from "./styleguideComponents/PaletteNoShade";
 import TypeGuide from "./styleguideComponents/TypeGuide";
 import Description from "./styleguideComponents/Description";
 import Title from "./styleguideComponents/Title";
 import Section from "./styleguideComponents/Section";
 import { fonts, colors } from "./branding/BrandName";
-import SharedColors from "./branding/SharedColors";
+import { brandColors, greyScale } from "./branding/SharedColors";
 
 const Document = () => (
     <Artboard name="Styleguide" style={{ padding: 100 }}>
@@ -20,10 +21,10 @@ const Document = () => (
             </Description>
 
             <Section title="SharedColors">
-                <Palette color={SharedColors} name="Palette Shared" />
+                <Palette color={brandColors} name="Palette Shared" />
             </Section>
-            <Section title="Color Palette">
-                <Palette color={colors} name="Palette" />
+            <Section title="NoShade">
+                <PaletteNoShade color={greyScale} name="Palette" />
             </Section>
             <Section title="Typography">
                 <Description>Description of typographic styles</Description>
