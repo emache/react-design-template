@@ -1,122 +1,70 @@
 /* @flow */
 import React from "react";
 import { View, Text } from "react-sketchapp";
+import styled from "styled-components/primitives";
 
-// A color is defined as an object that has
-// - a name
-// - a hex value or rgba value
+const ColorChipSize = 100;
 
-// A color swatch should have:
-// - shape with a color fill
-// - a paragraph/header/label: color name
-// - a paragraph/header/label: color hex value
-// - a paragraph/header/label: color rgba value
+export const Swatch = styled.View`
+    border: 1px solid #000000;
+    width: 350px;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    margin: 20px;
+`;
 
-const SWATCH_WIDTH = 100;
+export const LargeColorChip = styled.View`
+    width: ${ColorChipSize};
+    height: ${ColorChipSize};
+    background-color: ${props => props.bgcolor};
+`;
 
-const Swatch = ({ color, name }) => (
-    <View
-        name={`swatch-${name}`}
-        style={{
-            margin: 20,
-            borderWidth: 1,
-            borderColor: "#000",
-            width: 350,
-            flexDirection: "row"
-        }}
-    >
-        <View
-            name="color-chips"
-            style={{
-                borderRightColor: "#000",
-                borderRightWidth: 1
-            }}
-        >
-            <View
-                name="color-base"
-                style={{
-                    width: SWATCH_WIDTH,
-                    height: SWATCH_WIDTH,
-                    backgroundColor: color.base
-                }}
-            />
+const SmallColorChip = styled.View`
+    width: ${ColorChipSize / 2};
+    height: ${ColorChipSize / 2};
+    background-color: ${props => props.bgcolor};
+`;
 
-            <View
-                style={{
-                    width: SWATCH_WIDTH,
-                    height: SWATCH_WIDTH / 2,
-                    flexDirection: "row"
-                }}
-            >
-                <View
-                    style={{
-                        width: SWATCH_WIDTH / 2,
-                        height: SWATCH_WIDTH / 2,
-                        backgroundColor: color.lighter
-                    }}
-                />
+const SmallColorChipWrapper = styled.View`
+    display: flex;
+    flex-direction: row;
+    height: ${ColorChipSize / 2};
+`;
+export const Annotation = styled.Text`
+    color: #000000;
+    font-size: 12px;
+    font-family: Arial;
+    margin-bottom: 10px;
+`;
 
-                <View
-                    style={{
-                        width: SWATCH_WIDTH / 2,
-                        height: SWATCH_WIDTH / 2,
-                        backgroundColor: color.darker
-                    }}
-                />
-            </View>
+export const LargeAnnotation = styled.Text`
+    ${Annotation} font-size: 18px;
+    font-weight: bold;
+`;
+
+export const AnnotationWrapper = styled.View`
+    padding: 20px 0 0 20px;
+`;
+
+export default ({ color, name }) => (
+    <Swatch name={`swatch-${name}`}>
+        <View name="color-chips">
+            <LargeColorChip name="color-base" bgcolor={color.base} />
+            <SmallColorChipWrapper>
+                <SmallColorChip name="lighter" bgcolor={color.lighter} />
+                <SmallColorChip name="darker" bgcolor={color.darker} />
+            </SmallColorChipWrapper>
         </View>
-        <View
-            name="labels"
-            style={{
-                paddingLeft: 20,
-                paddingTop: 20
-            }}
-        >
-            <Text
-                style={{
-                    fontColor: "#000",
-                    fontWeight: "bold",
-                    fontSize: 18,
-                    fontFamily: "Arial",
-                    marginBottom: 10
-                }}
-            >
-                {name}
-            </Text>
-            <Text
-                style={{
-                    fontColor: "#000",
-                    fontWeight: "regular",
-                    fontSize: 12,
-                    fontFamily: "Arial",
-                    marginBottom: 10
-                }}
-            >
-                Base color: {color.base}
-            </Text>
-            <Text
-                style={{
-                    fontColor: "#000",
-                    fontWeight: "regular",
-                    fontSize: 12,
-                    fontFamily: "Arial",
-                    marginBottom: 10
-                }}
-            >
+        <AnnotationWrapper name="labels">
+            <LargeAnnotation>{name}</LargeAnnotation>
+            <Annotation>Base color: {color.base}</Annotation>
+            <Annotation>
                 {name}.lighter: {color.lighter}
-            </Text>
-            <Text
-                style={{
-                    fontColor: "#000",
-                    fontWeight: "regular",
-                    fontSize: 12,
-                    fontFamily: "Arial"
-                }}
-            >
+            </Annotation>
+            <Annotation>
                 {name}.darker: {color.darker}
-            </Text>
-        </View>
-    </View>
+            </Annotation>
+        </AnnotationWrapper>
+    </Swatch>
 );
-
-export default Swatch;
