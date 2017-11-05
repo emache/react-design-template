@@ -9,7 +9,7 @@ import TypeGuide from "./styleguideComponents/TypeGuide";
 import Description from "./styleguideComponents/Description";
 import Title from "./styleguideComponents/Title";
 import Section from "./styleguideComponents/Section";
-import TextBox from "./components/textbox";
+import TextBox from "./components/Textbox/Textbox";
 import { fonts, colors } from "./branding/BrandName";
 import { brandColors, greyScale } from "./branding/SharedColors";
 

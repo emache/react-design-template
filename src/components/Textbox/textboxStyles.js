@@ -1,5 +1,5 @@
 // input styles
-import { colors } from "./brandName";
+import { colors } from "../../branding/brandName";
 
 export const inputWidth = 300;
 export const inputHeight = 50;

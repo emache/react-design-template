@@ -7,7 +7,7 @@ import {
     inputHeight,
     borderColor,
     borderWidth
-} from "../branding/inputStyles";
+} from "./textboxStyles";
 import tinycolor from "tinycolor2";
 
 type Props = {
