@@ -8,13 +8,15 @@
         "watch": "skpm build --watch",
         "render": "skpm build --watch --run",
         "render:once": "skpm build --run",
-        "link-plugin": "skpm link"
+        "link-plugin": "skpm link",
+        "web": "react run src/web.js"
     },
     "author": "Marie Lu Vinh <marie@futurice.com>",
     "license": "MIT",
     "dependencies": {
         "prettier": "^1.7.4",
         "react": "^15.4.2",
+        "react-dom": "^15.4.2",
         "react-sketchapp": "^0.12.1",
         "react-test-renderer": "^15.4.2",
         "tinycolor2": "^1.4.1",
@@ -23,6 +25,8 @@
     },
     "devDependencies": {
         "patch-package": "^3.6.0",
-        "skpm": "^0.10.2"
+        "skpm": "^0.10.2",
+        "extract-text-webpack-plugin": "^2.1.0",
+        "nwb": "^0.15.6"
     }
 }

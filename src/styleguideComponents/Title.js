@@ -1,6 +1,6 @@
 import React from "react";
 import { Text, View } from "react-sketchapp";
-import { spacing, colors, typeSizes } from "../branding/BrandName";
+import { spacing, colors, typeSizes } from "../branding/brandName";
 
 const Title = ({ children }) => (
     <View

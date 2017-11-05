@@ -6,8 +6,9 @@ import {
     inputWidth,
     inputHeight,
     borderColor,
-    borderWidth
-} from "./textboxStyles";
+    borderWidth,
+    InnerTextboxStyle
+} from "./textboxSharedStyles";
 import tinycolor from "tinycolor2";
 
 type Props = {
@@ -22,24 +23,25 @@ const Label = styled.View`
     margin-bottom: 15px;
 `;
 
-const InnerTextBox = styled.View`
-    width: ${inputWidth}px;
-    height: ${inputHeight}px;
-    border: ${borderWidth}px solid
-        ${({ state }) =>
-            state === "hover"
-                ? tinycolor(borderColor)
-                      .lighten(10)
-                      .toString()
-                : borderColor};
+const StyledInnerTextbox = styled.View`
+${InnerTextboxStyle};
+    ${({ state }) =>
+        state === "hover"
+            ? "border-color: " +
+              tinycolor(borderColor)
+                  .lighten(10)
+                  .toString()
+            : ""};
+}
+}
 `;
 
 const TextBox = ({ label, value, state, children }: Props) => (
     <View>
         <Label>{label}</Label>
-        <InnerTextBox state={state}>
+        <StyledInnerTextbox state={state}>
             <Text>{value}</Text>
-        </InnerTextBox>
+        </StyledInnerTextbox>
         {children}
     </View>
 );

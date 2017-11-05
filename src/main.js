@@ -9,16 +9,15 @@ import TypeGuide from "./styleguideComponents/TypeGuide";
 import Description from "./styleguideComponents/Description";
 import Title from "./styleguideComponents/Title";
 import Section from "./styleguideComponents/Section";
-import TextBox from "./components/Textbox/Textbox";
-import { fonts, colors } from "./branding/BrandName";
-import { brandColors, greyScale } from "./branding/SharedColors";
+import LoginForm from "./components/LoginForm";
+import { fonts, colors } from "./branding/brandName";
+import { brandColors, greyScale } from "./branding/sharedColors";
 
 const Document = () => (
     <Artboard name="Styleguide" style={{ padding: 100 }}>
         <View name="document">
             <Title>Styleguide example</Title>
-            <TextBox label="Another label" value="placeholder" />
-            <TextBox label="test label" value="placeholder" state="hover" />
+            <LoginForm />
         </View>
     </Artboard>
 );
