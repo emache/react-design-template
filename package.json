@@ -22,6 +22,7 @@
         "react-primitives": "^0.4.2"
     },
     "devDependencies": {
+        "patch-package": "^3.6.0",
         "skpm": "^0.10.2"
     }
 }

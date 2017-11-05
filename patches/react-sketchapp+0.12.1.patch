@@ -1,0 +1,23 @@
+patch-package
+--- a/node_modules/react-sketchapp/lib/components/Text.js
++++ b/node_modules/react-sketchapp/lib/components/Text.js
+@@ -34,7 +34,7 @@ function _inherits(subClass, superClass) { if (typeof superClass !== "function"
+ 
+ var propTypes = {
+   // TODO(lmr): do some nice warning stuff like RN does
+-  style: _propTypes2.default.shape(_extends({}, _ViewStylePropTypes2.default, _TextStylePropTypes2.default)),
++  style: _propTypes2.default.any,
+   name: _propTypes2.default.string,
+   children: _propTypes2.default.node
+ };
+--- a/node_modules/react-sketchapp/lib/components/View.js
++++ b/node_modules/react-sketchapp/lib/components/View.js
+@@ -30,7 +30,7 @@ function _inherits(subClass, superClass) { if (typeof superClass !== "function"
+ 
+ var propTypes = {
+   // TODO(lmr): do some nice warning stuff like RN does
+-  style: _propTypes2.default.shape(_extends({}, _ViewStylePropTypes2.default)),
++  style: _propTypes2.default.any,
+   name: _propTypes2.default.string,
+   children: _propTypes2.default.node
+ };
