@@ -1,6 +1,6 @@
 // @flow
 // Global Design System settings: shared colors, text, spacing, grid.
-import { brandColors, greyScale } from "./SharedColors";
+import { brandColors, greyScale } from "./sharedColors";
 
 // Global color names
 // Favor generic names to actual color names.
