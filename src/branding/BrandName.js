@@ -1,38 +1,37 @@
+// @flow
 // Global Design System settings: shared colors, text, spacing, grid.
-import brandColors from './SharedColors';
+import { brandColors, greyScale } from "./SharedColors";
 
 // Global color names
 // Favor generic names to actual color names.
 export const colors = {
     primary: brandColors.Night,
-    primary_lighter: brandColors.Night_lighter,
-    primary_darker: brandColors.Night_darker,
     secondary: brandColors.Peach,
     accent: brandColors.Sur,
     success: brandColors.Pear,
     warning: brandColors.Lemon,
     failure: brandColors.Tomato,
-    black: brandColors.Black,
-    grey70: brandColors.Grey70,
-    grey30: brandColors.Grey30,
-    grey10: brandColors.Grey10,
-    grey03: brandColors.Grey3,
-    white: brandColors.White
+    black: greyScale.Black,
+    grey70: greyScale.Grey70,
+    grey30: greyScale.Grey30,
+    grey10: greyScale.Grey10,
+    grey03: greyScale.Grey3,
+    white: greyScale.White
 };
 
 // Global font and typography settings
 const fontFamilies = {
-    display: 'Arial',
-    body: 'Georgia',
+    display: "Arial",
+    body: "Georgia"
 };
 
 const fontWeights = {
-  regular: 'regular',
-  bold: 'bold',
+    regular: "regular",
+    bold: "bold"
 };
 
 // Base font size
-const baseFontSize = 16
+const baseFontSize = 16;
 
 // Sizes
 export const typeSizes = {
@@ -41,10 +40,10 @@ export const typeSizes = {
     body: baseFontSize * 0.875, // 14
     l: baseFontSize, // 16
     xl: baseFontSize * 1.5, // 24
-    xxl: baseFontSize * 2 , // 32
+    xxl: baseFontSize * 2, // 32
     xxxl: baseFontSize * 2.625, // 42
     display: baseFontSize * 3 // 48
-}
+};
 
 // Spacing, based off the base font-size.
 export const spacing = {
@@ -55,8 +54,8 @@ export const spacing = {
     l: 5 * baseFontSize,
     xl: 7 * baseFontSize,
     xxl: 11 * baseFontSize,
-    xxxl: 13 * baseFontSize,
-}
+    xxxl: 13 * baseFontSize
+};
 
 // Typographic styles
 export const fonts = {
@@ -67,14 +66,14 @@ export const fonts = {
         fontWeight: fontWeights.bold,
         marginBottom: spacing.m
     },
-    'title-1': {
+    "title-1": {
         color: colors.primary,
         fontSize: typeSizes.xxxl,
         fontFamily: fontFamilies.display,
         fontWeight: fontWeights.bold,
         marginBottom: spacing.m
     },
-    'title-2': {
+    "title-2": {
         color: colors.primary,
         fontSize: typeSizes.xxl,
         fontFamily: fontFamilies.display,
@@ -82,14 +81,14 @@ export const fonts = {
         lineHeight: 36,
         marginBottom: spacing.s
     },
-    'title-3': {
+    "title-3": {
         color: colors.primary,
         fontSize: typeSizes.xl,
         fontFamily: fontFamilies.body,
         fontWeight: fontWeights.regular,
         marginBottom: spacing.s
     },
-    'title-4': {
+    "title-4": {
         color: colors.primary,
         fontSize: typeSizes.l,
         fontFamily: fontFamilies.body,
@@ -102,7 +101,6 @@ export const fonts = {
         fontFamily: fontFamilies.body,
         fontWeight: fontWeights.regular,
         marginBottom: spacing.xs
-
     },
     small: {
         color: colors.secondary,
@@ -111,10 +109,10 @@ export const fonts = {
         fontWeight: fontWeights.regular,
         marginBottom: spacing.xxs
     },
-    'extra-small': {
+    "extra-small": {
         color: colors.secondary,
         fontSize: typeSizes.xs,
         fontFamily: fontFamilies.body,
-        fontWeight: fontWeights.regular,
+        fontWeight: fontWeights.regular
     }
 };
