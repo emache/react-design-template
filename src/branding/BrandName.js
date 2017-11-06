@@ -57,62 +57,147 @@ export const spacing = {
     xxxl: 13 * baseFontSize
 };
 
+//-------------------------
 // Typographic styles
-export const fonts = {
-    headline: {
-        color: colors.accent,
-        fontSize: typeSizes.display,
-        fontFamily: fontFamilies.display,
-        fontWeight: fontWeights.bold,
-        marginBottom: spacing.m
-    },
-    "title-1": {
-        color: colors.primary,
-        fontSize: typeSizes.xxxl,
-        fontFamily: fontFamilies.display,
-        fontWeight: fontWeights.bold,
-        marginBottom: spacing.m
-    },
-    "title-2": {
-        color: colors.primary,
-        fontSize: typeSizes.xxl,
-        fontFamily: fontFamilies.display,
-        fontWeight: fontWeights.bold,
-        lineHeight: 36,
-        marginBottom: spacing.s
-    },
-    "title-3": {
-        color: colors.primary,
-        fontSize: typeSizes.xl,
-        fontFamily: fontFamilies.body,
-        fontWeight: fontWeights.regular,
-        marginBottom: spacing.s
-    },
-    "title-4": {
-        color: colors.primary,
-        fontSize: typeSizes.l,
-        fontFamily: fontFamilies.body,
-        fontWeight: fontWeights.regular,
-        marginBottom: spacing.xs
-    },
-    Body: {
-        color: colors.primary,
-        fontSize: typeSizes.body,
-        fontFamily: fontFamilies.body,
-        fontWeight: fontWeights.regular,
-        marginBottom: spacing.xs
-    },
-    small: {
-        color: colors.secondary,
-        fontSize: typeSizes.s,
-        fontFamily: fontFamilies.body,
-        fontWeight: fontWeights.regular,
-        marginBottom: spacing.xxs
-    },
-    "extra-small": {
-        color: colors.secondary,
-        fontSize: typeSizes.xs,
-        fontFamily: fontFamilies.body,
-        fontWeight: fontWeights.regular
-    }
-};
+
+// Typographic colors
+export const primaryText = `
+    color: ${colors.primary} `;
+
+export const secondaryText = `
+    color: ${colors.grey30} `;
+
+export const disabledText = `
+    color: ${colors.grey70} `;
+
+export const accentText = `
+    color: ${colors.accent.darker} `;
+
+export const linkText = `
+    color: ${colors.accent};
+    text-decoration: underlined; `;
+
+export const successText = `
+    color: ${colors.success.base} `;
+
+export const warningText = `
+    color: ${colors.warning.darker} `;
+
+export const failureText = `
+    color: ${colors.failure.base} `;
+
+// Typographic shared styles
+export const defaultFontStyle = `
+    font-size: ${typeSizes.body};
+    font-family: ${fontFamilies.body};
+    font-weight: ${fontWeights.regular};
+    ${primaryText};
+`;
+
+export const displayFontStyle = `
+    ${accentText};
+    font-size: ${typeSizes.display};
+    font-family: ${fontFamilies.display};
+    font-weight: ${fontWeights.bold};
+`;
+
+export const h1FontStyle = `
+    ${accentText};
+    font-size: ${typeSizes.xxxl};
+    font-family: ${fontFamilies.display};
+    font-weight: ${fontWeights.bold};
+`;
+
+export const h2FontStyle = `
+    ${accentText};
+    font-size: ${typeSizes.xxl};
+    font-family: ${fontFamilies.display};
+    font-weight: ${fontWeights.bold};
+`;
+
+export const h3FontStyle = `
+    ${accentText};
+    font-size: ${typeSizes.xl};
+    font-family: ${fontFamilies.display};
+    font-weight: ${fontWeights.bold};
+`;
+
+export const largeFontStyle = `
+    ${accentText};
+    font-size: ${typeSizes.l};
+    font-family: ${fontFamilies.display};
+    font-weight: ${fontWeights.bold};
+`;
+
+export const smallFontSize = `
+    ${secondaryText};
+    font-size: ${typeSizes.s};
+    font-family: ${fontFamilies.display};
+    font-weight: ${fontWeights.bold};
+`;
+
+export const extraSmallFontSize = `
+    ${secondaryText};
+    font-size: ${typeSizes.xs};
+    font-family: ${fontFamilies.display};
+    font-weight: ${fontWeights.bold};
+`;
+
+// export const fonts = {
+//     headline: {
+//         color: colors.accent,
+//         fontSize: typeSizes.display,
+//         fontFamily: fontFamilies.display,
+//         fontWeight: fontWeights.bold,
+//         marginBottom: spacing.m
+//     },
+//     "title-1": {
+//         color: colors.primary,
+//         fontSize: typeSizes.xxxl,
+//         fontFamily: fontFamilies.display,
+//         fontWeight: fontWeights.bold,
+//         marginBottom: spacing.m
+//     },
+//     "title-2": {
+//         color: colors.primary,
+//         fontSize: typeSizes.xxl,
+//         fontFamily: fontFamilies.display,
+//         fontWeight: fontWeights.bold,
+//         lineHeight: 36,
+//         marginBottom: spacing.s
+//     },
+//     "title-3": {
+//         color: colors.primary,
+//         fontSize: typeSizes.xl,
+//         fontFamily: fontFamilies.body,
+//         fontWeight: fontWeights.regular,
+//         marginBottom: spacing.s
+//     },
+//     "title-4": {
+//         color: colors.primary,
+//         fontSize: typeSizes.l,
+//         fontFamily: fontFamilies.body,
+//         fontWeight: fontWeights.regular,
+//         marginBottom: spacing.xs
+//     },
+//     body: {
+//         color: colors.primary,
+//         fontSize: typeSizes.body,
+//         fontFamily: fontFamilies.body,
+//         fontWeight: fontWeights.regular,
+//         marginBottom: spacing.xs
+//     },
+//     small: {
+//         color: colors.secondary,
+//         fontSize: typeSizes.s,
+//         fontFamily: fontFamilies.body,
+//         fontWeight: fontWeights.regular,
+//         marginBottom: spacing.xxs
+//     },
+//     "extra-small": {
+//         color: colors.secondary,
+//         fontSize: typeSizes.xs,
+//         fontFamily: fontFamilies.body,
+//         fontWeight: fontWeights.regular
+//     }
+// };

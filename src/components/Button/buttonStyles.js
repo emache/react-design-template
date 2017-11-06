@@ -1,23 +1,26 @@
 // input styles
-import { colors } from "../../branding/brandName";
+import { colors, spacing } from "../../branding/brandName";
+import tinycolor from "tinycolor2";
 
-export const buttonWidth = 300;
-export const buttonHeight = 50;
-export const buttonBorderColor = colors.failure.base;
-export const buttonBgColor = colors.failure.base;
-export const buttonBorderWidth = 1;
+export const buttonBgColor = colors.primary.base;
+export const buttonBgColorHover = colors.primary.darker;
+export const buttonBgColorActive = tinycolor(colors.primary).darken(10);
 
 export const buttonStyle = `
     width: 300px;
-    height: 50px;
+    min-height: ${spacing.xs}px;
+    padding: ${spacing.xs}px;
     background-color: ${buttonBgColor};
-    margin: 10px 0;
+    margin: ${spacing.xs}px 0;
+    text-align: center;
+    align-items: center;
+    color: ${colors.white};
 
     &:hover {
-        background-color: red;
+        background-color: ${buttonBgColorHover};
     }
     &:active {
-        background-color: pink;
+        background-color: ${buttonBgColorActive};
         position: relative;
         top: 1px;
     }
