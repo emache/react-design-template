@@ -7,7 +7,8 @@ import {
     inputHeight,
     borderColor,
     borderWidth,
-    InnerTextboxStyle
+    InnerTextboxStyle,
+    TextboxLabelStyle
 } from "./textboxSharedStyles";
 import tinycolor from "tinycolor2";
 
@@ -17,28 +18,23 @@ type Props = {
     children?: React$Element<any>
 };
 
-const Label = styled(View)`
-    font-size: 14px;
-    color: #000000;
-    margin-bottom: 15px;
-`; // could have this in a separate file and share it with the Sketch version. Input fields are specials so passing styles instead.
+const Label = styled(Text)`
+    ${TextboxLabelStyle};
+`;
+// could have this in a separate file and share it with the Sketch version.
+//Input fields are specials so passing styles instead.
 
-const StyledInnerTextBox = styled.input`
+const StyledInnerTextbox = styled.input`
     ${InnerTextboxStyle};
-    &:hover {
-        border-color: ${tinycolor(borderColor)
-            .lighten(10)
-            .toString()};
-    }
 `;
 
-const TextBox = ({ label, value, children }: Props) => (
+const Textbox = ({ label, value, children }: Props) => (
     <View>
         <Label>
             <Text>{label}</Text>
         </Label>
-        <StyledInnerTextBox defaultValue={value} />
+        <StyledInnerTextbox defaultValue={value} />
     </View>
 );
 
-export default TextBox;
+export default Textbox;

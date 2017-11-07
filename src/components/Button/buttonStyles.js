@@ -8,7 +8,8 @@ export const buttonBgColorActive = tinycolor(colors.primary).darken(10);
 
 export const buttonStyle = `
     width: 300px;
-    min-height: ${spacing.xs}px;
+    height: 50px;
+    box-sizing: border-box;
     padding: ${spacing.xs}px;
     background-color: ${buttonBgColor};
     margin: ${spacing.xs}px 0;

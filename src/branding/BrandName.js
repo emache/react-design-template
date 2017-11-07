@@ -22,7 +22,7 @@ export const colors = {
 // Global font and typography settings
 const fontFamilies = {
     display: "Arial",
-    body: "Georgia"
+    body: "Arial"
 };
 
 const fontWeights = {

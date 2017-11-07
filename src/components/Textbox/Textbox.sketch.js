@@ -7,8 +7,10 @@ import {
     inputHeight,
     borderColor,
     borderWidth,
-    InnerTextboxStyle
+    InnerTextboxStyle,
+    TextboxLabelStyle
 } from "./textboxSharedStyles";
+import { colors } from "../../branding/brandName";
 import tinycolor from "tinycolor2";
 
 type Props = {
@@ -17,14 +19,13 @@ type Props = {
     children?: React$Element<any>
 };
 
-const Label = styled.View`
-    font-size: 14px;
-    color: #000000;
-    margin-bottom: 15px;
+const Label = styled.Text`
+    ${TextboxLabelStyle};
+    text-color: #b1dfc1;
 `;
 
 const StyledInnerTextbox = styled.View`
-${InnerTextboxStyle};
+    ${InnerTextboxStyle};
     ${({ state }) =>
         state === "hover"
             ? "border-color: " +
@@ -32,13 +33,11 @@ ${InnerTextboxStyle};
                   .lighten(10)
                   .toString()
             : ""};
-}
-}
 `;
 
 const TextBox = ({ label, value, state, children }: Props) => (
     <View>
-        <Label>{label}</Label>
+        <Label> {label}</Label>
         <StyledInnerTextbox state={state}>
             <Text>{value}</Text>
         </StyledInnerTextbox>
