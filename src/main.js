@@ -2,7 +2,7 @@
 /* eslint-disable react/jsx-filename-extension, import/no-named-as-default-member */
 
 import React from "react";
-import { render, Text, View, Artboard } from "react-sketchapp";
+import { render, Text, View, Artboard, Page, Document } from "react-sketchapp";
 import Palette from "./styleguideComponents/Palette";
 import PaletteNoShade from "./styleguideComponents/PaletteNoShade";
 import TypeGuide from "./styleguideComponents/TypeGuide";
@@ -13,30 +13,33 @@ import LoginForm from "./components/LoginForm/LoginForm";
 import { fonts, colors } from "./branding/brandName";
 import { brandColors, greyScale } from "./branding/sharedColors";
 
-const Document = () => (
-    <Artboard name="Styleguide" style={{ padding: 100 }}>
-        <View name="document">
-            <Title>Styleguide example</Title>
-            <LoginForm />
-        </View>
-    </Artboard>
+const DesignSystem = () => (
+    <Document>
+        <Page name="Colours">
+            <Artboard name="01 Colours" style={{ padding: 100 }}>
+                <View name="document">
+                    <Title>Styleguide example</Title>
+
+                    <Description>
+                        Example styleguide generated using React-Sketchapp from
+                        Airbnb.
+                    </Description>
+
+                    <Section title="Colour palette">
+                        <Palette color={brandColors} name="Palette Shared" />
+                    </Section>
+
+                    <Section title="Grey palette">
+                        <PaletteNoShade color={greyScale} name="Palette" />
+                    </Section>
+                </View>
+            </Artboard>
+        </Page>
+    </Document>
 );
 
 export default (context: any) => {
-    render(<Document />, context.document.currentPage());
+    render(<DesignSystem />, context.document.currentPage());
 };
 
-// <Description>
-//     Example styleguide generated using React-Sketchapp from Airbnb.
-// </Description>
-
-// <Section title="SharedColors">
-//     <Palette color={brandColors} name="Palette Shared" />
-// </Section>
-// <Section title="NoShade">
-//     <PaletteNoShade color={greyScale} name="Palette" />
-// </Section>
-// <Section title="Typography">
-//     <Description>Description of typographic styles</Description>
-//     <TypeGuide textStyle={fonts} name="typography" />
-// </Section>
+// <LoginForm />
