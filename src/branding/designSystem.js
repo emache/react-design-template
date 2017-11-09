@@ -44,7 +44,7 @@ const fontWeights = {
 const baseFontSize = 16;
 
 // Sizes
-export const typeSizes = {
+export const fontSize = {
     xs: baseFontSize * 0.625, // 10
     s: baseFontSize * 0.75, // 12
     body: baseFontSize * 0.875, // 14
@@ -107,7 +107,7 @@ export const failureTextStyle = `
 
 // Typographic shared styles
 export const defaultTextStyle = `
-    font-size: ${typeSizes.body};
+    font-size: ${fontSize.body};
     font-family: ${fontFamilies.body};
     font-weight: ${fontWeights.regular};
     ${primaryTextStyle};
@@ -115,21 +115,21 @@ export const defaultTextStyle = `
 
 export const smallTextStyle = `
     ${secondaryTextStyle};
-    font-size: ${typeSizes.s};
+    font-size: ${fontSize.s};
     font-family: ${fontFamilies.body};
     font-weight: ${fontWeights.bold};
 `;
 
 export const extraSmallTextStyle = `
     ${secondaryTextStyle};
-    font-size: ${typeSizes.xs};
+    font-size: ${fontSize.xs};
     font-family: ${fontFamilies.body};
     font-weight: ${fontWeights.bold};
 `;
 
 export const largeTextStyle = `
     ${accentTextStyle};
-    font-size: ${typeSizes.l};
+    font-size: ${fontSize.l};
     font-family: ${fontFamilies.body};
     font-weight: ${fontWeights.bold};
 `;
@@ -137,28 +137,28 @@ export const largeTextStyle = `
 // Heading styles
 export const displayTextStyle = `
     ${accentTextStyle};
-    font-size: ${typeSizes.display};
+    font-size: ${fontSize.display};
     font-family: ${fontFamilies.header};
     font-weight: ${fontWeights.bold};
 `;
 
 export const h1TextStyle = `
     ${accentTextStyle};
-    font-size: ${typeSizes.xxxl};
+    font-size: ${fontSize.xxxl};
     font-family: ${fontFamilies.header};
     font-weight: ${fontWeights.bold};
 `;
 
 export const h2TextStyle = `
     ${accentTextStyle};
-    font-size: ${typeSizes.xxl};
+    font-size: ${fontSize.xxl};
     font-family: ${fontFamilies.header};
     font-weight: ${fontWeights.bold};
 `;
 
 export const h3TextStyle = `
     ${accentTextStyle};
-    font-size: ${typeSizes.xl};
+    font-size: ${fontSize.xl};
     font-family: ${fontFamilies.header};
     font-weight: ${fontWeights.bold};
 `;
