@@ -61,54 +61,54 @@ export const spacing = {
 // Typographic styles
 
 // Typographic colors
-export const primaryText = `
+export const primaryTextStyle = `
     color: ${colors.primary} `;
 
-export const secondaryText = `
+export const secondaryTextStyle = `
     color: ${colors.grey30} `;
 
-export const disabledText = `
+export const disabledTextStyle = `
     color: ${colors.grey70} `;
 
-export const accentText = `
+export const accentTextStyle = `
     color: ${colors.accent.darker} `;
 
-export const linkText = `
+export const linkStyle = `
     color: ${colors.accent};
     text-decoration: underlined; `;
 
-export const successText = `
+export const successTextStyle = `
     color: ${colors.success.base} `;
 
-export const warningText = `
+export const warningTextStyle = `
     color: ${colors.warning.darker} `;
 
-export const failureText = `
+export const failureTextStyle = `
     color: ${colors.failure.base} `;
 
 // Typographic shared styles
-export const defaultFontStyle = `
+export const defaultBody = `
     font-size: ${typeSizes.body};
     font-family: ${fontFamilies.body};
     font-weight: ${fontWeights.regular};
     ${primaryText};
 `;
 
-export const smallFontSize = `
+export const smallTextStyle = `
     ${secondaryText};
     font-size: ${typeSizes.s};
     font-family: ${fontFamilies.body};
     font-weight: ${fontWeights.bold};
 `;
 
-export const extraSmallFontSize = `
+export const extraSmallTextSize = `
     ${secondaryText};
     font-size: ${typeSizes.xs};
     font-family: ${fontFamilies.body};
     font-weight: ${fontWeights.bold};
 `;
 
-export const largeFontStyle = `
+export const largeTextStyle = `
     ${accentText};
     font-size: ${typeSizes.l};
     font-family: ${fontFamilies.body};
@@ -116,28 +116,28 @@ export const largeFontStyle = `
 `;
 
 // Heading styles
-export const displayFontStyle = `
+export const displayTexttyle = `
     ${accentText};
     font-size: ${typeSizes.display};
     font-family: ${fontFamilies.header};
     font-weight: ${fontWeights.bold};
 `;
 
-export const h1FontStyle = `
+export const h1TextStyle = `
     ${accentText};
     font-size: ${typeSizes.xxxl};
     font-family: ${fontFamilies.header};
     font-weight: ${fontWeights.bold};
 `;
 
-export const h2FontStyle = `
+export const h2TextStyle = `
     ${accentText};
     font-size: ${typeSizes.xxl};
     font-family: ${fontFamilies.header};
     font-weight: ${fontWeights.bold};
 `;
 
-export const h3FontStyle = `
+export const h3TextStyle = `
     ${accentText};
     font-size: ${typeSizes.xl};
     font-family: ${fontFamilies.header};
