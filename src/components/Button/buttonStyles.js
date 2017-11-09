@@ -1,5 +1,5 @@
 // input styles
-import { colors, spacing } from "../../branding/brandName";
+import { colors, spacing } from "../../branding/designSystem";
 import tinycolor from "tinycolor2";
 
 export const buttonBgColor = colors.primary.base;

@@ -1,6 +1,6 @@
 import React from "react";
 import { Text } from "react-sketchapp";
-import { spacing, colors, typeSizes } from "../branding/brandName";
+import { spacing, colors, typeSizes } from "../branding/designSystem";
 
 const Description = ({ children }) => (
     <Text

@@ -2,7 +2,7 @@
 import React from "react";
 import { View } from "react-sketchapp";
 import Title from "./Title";
-import { spacing } from "../branding/brandName";
+import { spacing } from "../branding/designSystem";
 
 const Section = ({ title, children }) => (
     <View

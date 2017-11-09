@@ -4,7 +4,7 @@ import {
     spacing,
     defaultFontStyle,
     secondaryText
-} from "../../branding/brandName";
+} from "../../branding/designSystem";
 import styled from "styled-components/primitives";
 
 export const borderColor = colors.primary.base;
