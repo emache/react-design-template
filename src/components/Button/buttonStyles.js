@@ -2,13 +2,13 @@
 import { colors, spacing } from "../../branding/designSystem";
 import tinycolor from "tinycolor2";
 
-export const primaryButtonBgColor = colors.primary.base;
+export const primaryButtonColor = colors.primary.base;
 export const primaryButtonBgColorHover = colors.primary.darker;
 export const primaryButtonBgColorActive = tinycolor(
     colors.primary.darker
 ).darken(10);
 
-export const secondaryButtonBgColor = colors.secondary.base;
+export const secondaryButtonColor = colors.secondary.base;
 export const secondaryButtonBgColorHover = colors.secondary.darker;
 export const secondaryButtonBgColorActive = tinycolor(
     colors.secondary.darker
@@ -33,7 +33,7 @@ const baseButtonStyle = `
 
 export const primaryButtonStyle = `
     ${baseButtonStyle};
-    background-color: ${primaryButtonBgColor};
+    background-color: ${primaryButtonColor};
     color: ${colors.white};
 
     &:hover {
@@ -50,9 +50,16 @@ export const primaryButtonStyle = `
     }
 `;
 
+export const primaryButtonInvertedStyle = `
+    ${primaryButtonStyle};
+    border: 1px solid ${primaryButtonColor};
+    background-color: transparent;
+    color: ${primaryButtonColor};
+`;
+
 export const secondaryButtonStyle = `
     ${baseButtonStyle};
-    background-color: ${secondaryButtonBgColor};
+    background-color: ${secondaryButtonColor};
     color: ${colors.white};
 
     &:hover {
@@ -67,4 +74,11 @@ export const secondaryButtonStyle = `
         background-color: ${buttonBgColorDisabled};
         color: ${colors.grey70}
     }
+`;
+
+export const secondaryButtonInvertedStyle = `
+    ${secondaryButtonStyle};
+    border: 1px solid ${secondaryButtonColor};
+    background-color: transparent;
+    color: ${primaryButtonColor};
 `;
