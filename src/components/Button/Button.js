@@ -2,21 +2,30 @@
 import React from "react";
 import { View, Text } from "react-primitives";
 import styled from "styled-components";
-import { buttonStyle } from "./buttonStyles";
+import { primaryButtonStyle, secondaryButtonStyle } from "./buttonStyles";
 
 type Props = {
     state: string,
     value: string
 };
 
-const InnerButton = styled.div`
-    ${buttonStyle};
+const InnerPrimaryButton = styled.div`
+    ${primaryButtonStyle};
+`;
+const InnerSecondaryButton = styled.div`
+    ${secondaryButtonStyle};
 `;
 
-const Button = ({ state, value }: Props) => (
-    <InnerButton state={state} tabIndex={0} role="button">
+export const PrimaryButton = ({ state, value }: Props) => (
+    <InnerPrimaryButton state={state} tabIndex={0} role="button">
         {value}
-    </InnerButton>
+    </InnerPrimaryButton>
 );
 
-export default Button;
+export const SecondaryButton = ({ state, value }: Props) => (
+    <InnerSecondaryButton state={state} tabIndex={0} role="button">
+        {value}
+    </InnerSecondaryButton>
+);
+
+export default PrimaryButton;

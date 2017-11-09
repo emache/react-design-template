@@ -2,7 +2,7 @@
 import React from "react";
 import { View, Text } from "react-primitives";
 import styled from "styled-components";
-import Button from "./../Button/Button";
+import { PrimaryButton, SecondaryButton } from "./../Button/Button";
 import Textbox from "./../Textbox/Textbox";
 
 export const LoginForm = () => (
@@ -16,7 +16,8 @@ export const LoginForm = () => (
         }}
     >
         <Textbox label="Label example" value="Placeholder" state="focus" />
-        <Button value="button link" />
+        <PrimaryButton value="button link" />
+        <SecondaryButton value="button link" />
     </View>
 );
 
