@@ -2,27 +2,22 @@
 import React from "react";
 import { View } from "react-sketchapp";
 import Swatch from "./Swatch";
+import { paletteStyle } from "./sharedStyles";
 import styled from "styled-components/primitives";
 
 type P = {
+    color: string,
     name: string
 };
 
 const Palette = styled.View`
-    width: 1200;
-    display: flex;
-    flex-wrap: wrap;
-    flex-direction: row;
-    justify-content: space-between;
-    padding: 0;
+    ${paletteStyle};
 `;
 
-export default ({ color }: P) => (
-    <Palette name="Palette">
-        {Object.keys(color).map(name => (
-            <Swatch color={color[name]} name={name} key={name} />
+export default ({ color, name }: P) => (
+    <Palette name={name}>
+        {Object.keys(color).map(colorName => (
+            <Swatch color={color[colorName]} name={colorName} key={colorName} />
         ))}
     </Palette>
 );
-
-// export default Palette;

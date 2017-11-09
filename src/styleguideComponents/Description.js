@@ -1,19 +1,14 @@
 import React from "react";
 import { Text } from "react-sketchapp";
-import { spacing, colors, typeSizes } from "../branding/designSystem";
+import { descriptionStyle } from "./sharedStyles";
+import styled from "styled-components/primitives";
+
+const DescriptionText = styled.Text`
+    ${descriptionStyle};
+`;
 
 const Description = ({ children }) => (
-    <Text
-        name="Description"
-        style={{
-            color: colors.grey30,
-            fontWeight: "regular",
-            fontSize: typeSizes.body,
-            fontFamily: "Arial"
-        }}
-    >
-        {children}
-    </Text>
+    <Text name="Description">{children}</Text>
 );
 
 export default Description;

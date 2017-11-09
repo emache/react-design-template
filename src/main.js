@@ -10,29 +10,30 @@ import Description from "./styleguideComponents/Description";
 import Title from "./styleguideComponents/Title";
 import Section from "./styleguideComponents/Section";
 import LoginForm from "./components/LoginForm/LoginForm";
-import { fonts, colors } from "./branding/designSystem";
+import { fonts, coreColors } from "./branding/designSystem";
 import { brandColors, greyScale } from "./branding/sharedColors";
 
 const DesignSystem = () => (
     <Document>
-        <Page name="Colours">
-            <Artboard name="01 Colours" style={{ padding: 100 }}>
+        <Page name="Colors">
+            <Artboard name="01 Colors" style={{ padding: 100 }}>
                 <View name="document">
-                    <Title>Styleguide example</Title>
-
-                    <Description>
-                        Example styleguide generated using React-Sketchapp from
-                        Airbnb.
-                    </Description>
-
-                    <Section title="Colour palette">
-                        <Palette color={brandColors} name="Palette Shared" />
+                    <Section title="Brand colors">
+                        <Palette color={brandColors} name="Brand colours" />
+                    </Section>
+                    <Section title="Color usage">
+                        <Palette color={coreColors} name="Color usage" />
                     </Section>
 
                     <Section title="Grey palette">
-                        <PaletteNoShade color={greyScale} name="Palette" />
+                        <PaletteNoShade color={greyScale} name="Grey palette" />
                     </Section>
                 </View>
+            </Artboard>
+        </Page>
+        <Page name="Typography">
+            <Artboard name="02 Typography" style={{ padding: 100 }}>
+                <TypeGuide />
             </Artboard>
         </Page>
     </Document>

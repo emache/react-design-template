@@ -19,8 +19,18 @@ export const colors = {
     white: greyScale.White
 };
 
+// The core colors are only created for the purpose of generating a Palette in the style guide
+export const coreColors = {
+    primary: brandColors.Night,
+    secondary: brandColors.Peach,
+    accent: brandColors.Sur,
+    success: brandColors.Pear,
+    warning: brandColors.Lemon,
+    failure: brandColors.Tomato
+};
+
 // Global font and typography settings
-const fontFamilies = {
+export const fontFamilies = {
     header: "Arial",
     body: "Arial"
 };
@@ -62,7 +72,7 @@ export const spacing = {
 
 // Typographic colors
 export const primaryTextStyle = `
-    color: ${colors.primary} `;
+    color: ${colors.primary.base} `;
 
 export const secondaryTextStyle = `
     color: ${colors.grey30} `;
@@ -73,14 +83,17 @@ export const disabledTextStyle = `
 export const accentTextStyle = `
     color: ${colors.accent.darker} `;
 
+export const linkStyleHover = `
+    text-decoration: none ;
+    font-weight: ${fontWeights.bold};
+    color: ${colors.accent.darker};
+`;
 export const linkStyle = `
-    color: ${colors.accent};
-    text-decoration: underlined;
+    color: ${colors.accent.base};
+    text-decoration: underline;
 
     &:hover {
-        text-decoration: none ;
-        font-weight: ${fontWeights.bold};
-        color: ${colors.accent.darker};
+        ${linkStyleHover};
     }`;
 
 export const successTextStyle = `
@@ -93,7 +106,7 @@ export const failureTextStyle = `
     color: ${colors.failure.base} `;
 
 // Typographic shared styles
-export const defaultBody = `
+export const defaultTextStyle = `
     font-size: ${typeSizes.body};
     font-family: ${fontFamilies.body};
     font-weight: ${fontWeights.regular};
@@ -107,7 +120,7 @@ export const smallTextStyle = `
     font-weight: ${fontWeights.bold};
 `;
 
-export const extraSmallTextSize = `
+export const extraSmallTextStyle = `
     ${secondaryTextStyle};
     font-size: ${typeSizes.xs};
     font-family: ${fontFamilies.body};
@@ -122,7 +135,7 @@ export const largeTextStyle = `
 `;
 
 // Heading styles
-export const displayTexttyle = `
+export const displayTextStyle = `
     ${accentTextStyle};
     font-size: ${typeSizes.display};
     font-family: ${fontFamilies.header};

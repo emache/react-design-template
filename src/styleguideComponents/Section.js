@@ -3,19 +3,16 @@ import React from "react";
 import { View } from "react-sketchapp";
 import Title from "./Title";
 import { spacing } from "../branding/designSystem";
+import { sectionStyle } from "./sharedStyles";
+import styled from "styled-components/primitives";
 
-const Section = ({ title, children }) => (
-    <View
-        name={`${title} Wrapper`}
-        style={{
-            marginBottom: spacing.xl,
-            flexDirection: "column",
-            width: 1200
-        }}
-    >
+const Section = styled.View`
+    ${sectionStyle};
+`;
+
+export default ({ title, children }) => (
+    <Section name={`${title} Wrapper`}>
         <Title>{title}</Title>
         {children}
-    </View>
+    </Section>
 );
-
-export default Section;
