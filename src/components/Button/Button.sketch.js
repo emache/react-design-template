@@ -9,15 +9,13 @@ type Props = {
     value: string
 };
 
-const InnerButton = styled.View`
+const InnerButton = styled.Text`
     ${buttonStyle};
 `;
 
 const Button = ({ state, value }: Props) => (
-    <View>
-        <InnerButton state={state}>
-            <Text>{value}</Text>
-        </InnerButton>
+    <View name="Button">
+        <InnerButton state={state}>{value}</InnerButton>
     </View>
 );
 

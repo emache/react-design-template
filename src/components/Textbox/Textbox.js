@@ -10,7 +10,6 @@ import {
     InnerTextboxStyle,
     TextboxLabelStyle
 } from "./textboxSharedStyles";
-import tinycolor from "tinycolor2";
 
 type Props = {
     label: string,
@@ -21,18 +20,14 @@ type Props = {
 const Label = styled(Text)`
     ${TextboxLabelStyle};
 `;
-// could have this in a separate file and share it with the Sketch version.
-//Input fields are specials so passing styles instead.
 
 const StyledInnerTextbox = styled.input`
     ${InnerTextboxStyle};
 `;
 
 const Textbox = ({ label, value, children }: Props) => (
-    <View>
-        <Label>
-            <Text>{label}</Text>
-        </Label>
+    <View name="textbox">
+        <Label>{label}</Label>
         <StyledInnerTextbox defaultValue={value} />
     </View>
 );

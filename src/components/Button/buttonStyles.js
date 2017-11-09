@@ -4,7 +4,7 @@ import tinycolor from "tinycolor2";
 
 export const buttonBgColor = colors.primary.base;
 export const buttonBgColorHover = colors.primary.darker;
-export const buttonBgColorActive = tinycolor(colors.primary).darken(10);
+export const buttonBgColorActive = tinycolor(colors.primary.darker).darken(10);
 
 export const buttonStyle = `
     width: 300px;
@@ -20,6 +20,7 @@ export const buttonStyle = `
     &:hover {
         background-color: ${buttonBgColorHover};
     }
+
     &:active {
         background-color: ${buttonBgColorActive};
         position: relative;

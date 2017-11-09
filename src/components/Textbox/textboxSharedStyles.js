@@ -11,6 +11,11 @@ export const borderColor = colors.primary.base;
 export const borderColorFocus = colors.accent.base;
 export const borderWidth = 1;
 
+export const InnerTextboxStyleFocus = `
+    border: ${borderWidth}px solid ${borderColorFocus};
+    outline: none;
+`;
+
 export const InnerTextboxStyle = `
     width: 300px;
     height: 50px;
@@ -20,8 +25,7 @@ export const InnerTextboxStyle = `
     border: ${borderWidth}px solid ${borderColor};
 
     &:focus {
-        border-color: ${borderColorFocus};
-        outline: none
+        ${InnerTextboxStyleFocus};
     }
 `;
 
