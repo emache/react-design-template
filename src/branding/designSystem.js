@@ -75,7 +75,13 @@ export const accentTextStyle = `
 
 export const linkStyle = `
     color: ${colors.accent};
-    text-decoration: underlined; `;
+    text-decoration: underlined;
+
+    &:hover {
+        text-decoration: none ;
+        font-weight: ${fontWeights.bold};
+        color: ${colors.accent.darker};
+    }`;
 
 export const successTextStyle = `
     color: ${colors.success.base} `;
@@ -91,25 +97,25 @@ export const defaultBody = `
     font-size: ${typeSizes.body};
     font-family: ${fontFamilies.body};
     font-weight: ${fontWeights.regular};
-    ${primaryText};
+    ${primaryTextStyle};
 `;
 
 export const smallTextStyle = `
-    ${secondaryText};
+    ${secondaryTextStyle};
     font-size: ${typeSizes.s};
     font-family: ${fontFamilies.body};
     font-weight: ${fontWeights.bold};
 `;
 
 export const extraSmallTextSize = `
-    ${secondaryText};
+    ${secondaryTextStyle};
     font-size: ${typeSizes.xs};
     font-family: ${fontFamilies.body};
     font-weight: ${fontWeights.bold};
 `;
 
 export const largeTextStyle = `
-    ${accentText};
+    ${accentTextStyle};
     font-size: ${typeSizes.l};
     font-family: ${fontFamilies.body};
     font-weight: ${fontWeights.bold};
@@ -117,28 +123,28 @@ export const largeTextStyle = `
 
 // Heading styles
 export const displayTexttyle = `
-    ${accentText};
+    ${accentTextStyle};
     font-size: ${typeSizes.display};
     font-family: ${fontFamilies.header};
     font-weight: ${fontWeights.bold};
 `;
 
 export const h1TextStyle = `
-    ${accentText};
+    ${accentTextStyle};
     font-size: ${typeSizes.xxxl};
     font-family: ${fontFamilies.header};
     font-weight: ${fontWeights.bold};
 `;
 
 export const h2TextStyle = `
-    ${accentText};
+    ${accentTextStyle};
     font-size: ${typeSizes.xxl};
     font-family: ${fontFamilies.header};
     font-weight: ${fontWeights.bold};
 `;
 
 export const h3TextStyle = `
-    ${accentText};
+    ${accentTextStyle};
     font-size: ${typeSizes.xl};
     font-family: ${fontFamilies.header};
     font-weight: ${fontWeights.bold};

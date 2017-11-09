@@ -22,9 +22,7 @@ const colorShades = (baseColor, lighterColor, darkerColor) => {
 };
 
 export const brandColors = {
-    Night: colorShades("#2F3137"),
-    Night_brighter: colorShades("#5A89A8"),
-    Night_darker: colorShades("#071F2E"),
+    Night: colorShades("#2F3137", "#5A89A8", "#071F2E"),
     Sur: colorShades("#96DBE4"),
     Peach: colorShades("#EFADA0", "", "#984838"),
     Tomato: colorShades("#E37059", "#E2806D", "#B53117"),
