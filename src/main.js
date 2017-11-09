@@ -10,7 +10,7 @@ import Description from "./styleguideComponents/Description";
 import Title from "./styleguideComponents/Title";
 import Section from "./styleguideComponents/Section";
 import LoginForm from "./components/LoginForm/LoginForm";
-import { fonts, colors } from "./branding/brandName";
+import { fonts, colors } from "./branding/designSystem";
 import { brandColors, greyScale } from "./branding/sharedColors";
 
 const DesignSystem = () => (
