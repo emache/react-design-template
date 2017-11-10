@@ -5,13 +5,13 @@ import tinycolor from "tinycolor2";
 export const primaryButtonColor = colors.primary.base;
 export const primaryButtonBgColorHover = colors.primary.darker;
 export const primaryButtonBgColorActive = tinycolor(
-    colors.primary.darker
+    primaryButtonBgColorHover
 ).darken(10);
 
 export const secondaryButtonColor = colors.secondary.base;
 export const secondaryButtonBgColorHover = colors.secondary.darker;
 export const secondaryButtonBgColorActive = tinycolor(
-    colors.secondary.darker
+    secondaryButtonBgColorHover
 ).darken(10);
 
 export const buttonBgColorDisabled = colors.grey30;
@@ -24,6 +24,11 @@ const baseButtonStyle = `
     text-align: center;
     align-items: center;
     margin: ${spacing.xs}px 0;
+    border: 2px solid;
+
+    &:hover {
+        cursor: pointer;
+    }
 
     &:active {
         position: relative;
@@ -36,60 +41,38 @@ const baseButtonStyle = `
     }
 `;
 
-export const primaryButtonStyle = `
-    ${baseButtonStyle};
-    background-color: ${primaryButtonColor};
-    color: ${colors.white};
+export const buttonStyle = props => {
+    let buttonColor = props.isSecondary
+        ? secondaryButtonColor
+        : primaryButtonColor;
 
-    &:hover {
-        background-color: ${primaryButtonBgColorHover};
-    }
+    let buttonHoverColor = props.isSecondary
+        ? secondaryButtonBgColorHover
+        : primaryButtonBgColorHover;
 
-    &:active {
-        background-color: ${primaryButtonBgColorActive};
-    }
-`;
+    let buttonActiveColor = props.isSecondary
+        ? secondaryButtonBgColorActive
+        : primaryButtonBgColorActive;
 
-export const primaryButtonInvertedStyle = `
-    ${primaryButtonStyle};
-    border: 1px solid ${primaryButtonColor};
-    background-color: transparent;
-    color: ${primaryButtonColor};
+    return `
+        ${baseButtonStyle};
 
-    &:hover {
-        border: 1px solid ${primaryButtonBgColorHover};;
-    }
+        background-color: ${props.isInverted ? "transparent" : buttonColor};
+        border-color: ${buttonColor};
+        color: ${props.isInverted ? buttonColor : colors.white};
 
-    &:active {
-        border: 1px solid ${primaryButtonBgColorActive};;
-    }
-`;
+        &:hover {
+            background-color: ${props.isInverted
+                ? buttonColor
+                : buttonHoverColor};
+            border-color: ${props.isInverted ? buttonColor : buttonHoverColor};
+            color: ${colors.white};
+        }
 
-export const secondaryButtonStyle = `
-    ${baseButtonStyle};
-    background-color: ${secondaryButtonColor};
-    color: ${colors.white};
-
-    &:hover {
-        background-color: ${secondaryButtonBgColorHover};
-    }
-
-    &:active {
-        background-color: ${secondaryButtonBgColorActive};
-    }
-`;
-
-export const secondaryButtonInvertedStyle = `
-    ${secondaryButtonStyle};
-    border: 1px solid ${secondaryButtonColor};
-    background-color: transparent;
-    color: ${primaryButtonColor};
-
-    &:hover {
-        border: 1px solid ${secondaryButtonBgColorHover};
-    }
-
-    &:active {
-        border: 1px solid ${secondaryButtonBgColorActive};
-    }
-`;
+        &:active {
+            background-color: ${buttonActiveColor};
+            border-color: ${buttonActiveColor};
+            color: ${colors.white};
+        }
+    `;
+};

@@ -2,12 +2,7 @@
 import React from "react";
 import { View, Text } from "react-primitives";
 import styled from "styled-components";
-import {
-    PrimaryButton,
-    SecondaryButton,
-    SecondaryInvertedButton,
-    PrimaryInvertedButton
-} from "./../Button/Button";
+import { Button } from "./../Button/Button";
 import Textbox from "./../Textbox/Textbox";
 
 export const LoginForm = () => (
@@ -21,10 +16,14 @@ export const LoginForm = () => (
         }}
     >
         <Textbox label="Label example" value="Placeholder" state="focus" />
-        <PrimaryButton value="button link" />
-        <PrimaryInvertedButton value="button link" />
-        <SecondaryButton value="button link" />
-        <SecondaryInvertedButton value="button link" />
+        <Button value="button primary" />
+        <Button value="button primary inv" isInverted="true" />
+        <Button value="button secondary" isSecondary="true" />
+        <Button
+            value="button secondary inv"
+            isSecondary="true"
+            isInverted="true"
+        />
     </View>
 );
 
