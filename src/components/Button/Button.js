@@ -13,8 +13,14 @@ const InnerButton = styled.div`
     ${buttonStyle};
 `;
 
-const Button = ({ state, value }: Props) => (
-    <InnerButton state={state} tabIndex={0} role="button">
+export const Button = ({ state, value, isSecondary, isInverted }: Props) => (
+    <InnerButton
+        state={state}
+        isSecondary={isSecondary}
+        tabIndex={0}
+        role="button"
+        isInverted={isInverted}
+    >
         {value}
     </InnerButton>
 );

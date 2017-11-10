@@ -15,7 +15,7 @@ import {
     colors,
     spacing,
     fontFamilies,
-    typeSizes,
+    fontSize,
     secondaryTextStyle,
     disabledTextStyle,
     accentTextStyle,
@@ -104,7 +104,7 @@ const FontChip = styled.View`
 const Sample = styled.Text`
     font-family: ${props => props.font};
     color: ${colors.black};
-    font-size: ${typeSizes.display};
+    font-size: ${fontSize.display};
 `;
 
 const Legend = styled.Text`

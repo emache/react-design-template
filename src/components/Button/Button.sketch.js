@@ -13,10 +13,16 @@ const InnerButton = styled.Text`
     ${buttonStyle};
 `;
 
-const Button = ({ state, value }: Props) => (
-    <View name="Button">
-        <InnerButton state={state}>{value}</InnerButton>
-    </View>
+export const Button = ({ state, value, isSecondary, isInverted }: Props) => (
+    <InnerButton
+        state={state}
+        isSecondary={isSecondary}
+        tabIndex={0}
+        role="button"
+        isInverted={isInverted}
+    >
+        {value}
+    </InnerButton>
 );
 
 export default Button;

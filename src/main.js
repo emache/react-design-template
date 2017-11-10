@@ -36,11 +36,12 @@ const DesignSystem = () => (
                 <TypeGuide />
             </Artboard>
         </Page>
+        <Page name="LoginForm">
+            <LoginForm />
+        </Page>
     </Document>
 );
 
 export default (context: any) => {
     render(<DesignSystem />, context.document.currentPage());
 };
-
-// <LoginForm />

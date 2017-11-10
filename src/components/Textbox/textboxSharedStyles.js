@@ -2,7 +2,7 @@
 import {
     colors,
     spacing,
-    defaultFontStyle,
+    defaultTextStyle,
     secondaryText
 } from "../../branding/designSystem";
 import styled from "styled-components/primitives";
@@ -30,7 +30,7 @@ export const InnerTextboxStyle = `
 `;
 
 export const TextboxLabelStyle = `
-    ${defaultFontStyle};
+    ${defaultTextStyle};
     font-weight: bold;
     color: ${colors.grey30};
     margin-bottom: ${spacing.xs}px;
