@@ -29,6 +29,11 @@ const baseButtonStyle = `
         position: relative;
         top: 1px;
     }
+
+    &:disabled {
+        background-color: ${buttonBgColorDisabled};
+        color: ${colors.grey70}
+    }
 `;
 
 export const primaryButtonStyle = `
@@ -43,11 +48,6 @@ export const primaryButtonStyle = `
     &:active {
         background-color: ${primaryButtonBgColorActive};
     }
-
-    &:disabled {
-        background-color: ${buttonBgColorDisabled};
-        color: ${colors.grey70}
-    }
 `;
 
 export const primaryButtonInvertedStyle = `
@@ -55,6 +55,14 @@ export const primaryButtonInvertedStyle = `
     border: 1px solid ${primaryButtonColor};
     background-color: transparent;
     color: ${primaryButtonColor};
+
+    &:hover {
+        border: 1px solid ${primaryButtonBgColorHover};;
+    }
+
+    &:active {
+        border: 1px solid ${primaryButtonBgColorActive};;
+    }
 `;
 
 export const secondaryButtonStyle = `
@@ -69,11 +77,6 @@ export const secondaryButtonStyle = `
     &:active {
         background-color: ${secondaryButtonBgColorActive};
     }
-
-    &:disabled {
-        background-color: ${buttonBgColorDisabled};
-        color: ${colors.grey70}
-    }
 `;
 
 export const secondaryButtonInvertedStyle = `
@@ -81,4 +84,12 @@ export const secondaryButtonInvertedStyle = `
     border: 1px solid ${secondaryButtonColor};
     background-color: transparent;
     color: ${primaryButtonColor};
+
+    &:hover {
+        border: 1px solid ${secondaryButtonBgColorHover};
+    }
+
+    &:active {
+        border: 1px solid ${secondaryButtonBgColorActive};
+    }
 `;
