@@ -20,8 +20,8 @@
         "react-sketchapp": "1.0.0-beta.5",
         "react-test-renderer": "^15.4.2",
         "tinycolor2": "^1.4.1",
-        "styled-components": "^2.1.0",
-        "react-primitives": "^0.4.2"
+        "styled-components": "^2.2.3",
+        "react-primitives": "^0.4.4"
     },
     "devDependencies": {
         "extract-text-webpack-plugin": "^2.1.0",
