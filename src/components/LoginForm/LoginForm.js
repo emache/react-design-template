@@ -33,7 +33,7 @@ export const LoginForm = () => (
         <Radio value="test option" name="group2">
             Test Radio button
         </Radio>
-        <Radio value="test option2" name="group" state="disabled">
+        <Radio value="test option2" name="group" state="checkedDisabled">
             Test Radio button2
         </Radio>
     </View>

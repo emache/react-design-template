@@ -101,8 +101,13 @@ export const radioHoverSketch = `
 `;
 
 export const radioCheckedHoverSketch = `
-     border: ${(radioSize - innerSize) / 2}px solid ${selectedColor};
-    background: ${selectedColorHover};
+    border: ${(radioSize - innerSize) / 2}px solid ${selectedColorHover};
+    background: ${innerColor};
+`;
+
+export const radioCheckedDisabledSketch = `
+    border: ${(radioSize - innerSize) / 2}px solid ${disabledColor};
+    background: ${innerColor};
 `;
 
 export const radioDisabledSketch = `

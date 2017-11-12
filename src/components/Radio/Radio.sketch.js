@@ -9,7 +9,8 @@ import {
     radioCheckedSketch,
     radioHoverSketch,
     radioCheckedHoverSketch,
-    radioDisabledSketch
+    radioDisabledSketch,
+    radioCheckedDisabledSketch
 } from "./radioStyles";
 type Props = {
     state: string,
@@ -31,6 +32,9 @@ const RadioBox = styled.View`
                 break;
             case "disabled":
                 return radioDisabledSketch;
+                break;
+            case "checkedDisabled":
+                return radioCheckedDisabledSketch;
                 break;
         }
     }};
