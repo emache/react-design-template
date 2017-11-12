@@ -4,6 +4,7 @@ import { View, Text } from "react-primitives";
 import styled from "styled-components";
 import { Button } from "./../Button/Button";
 import Input from "./../Input/Input";
+import Radio from "./../Radio/Radio";
 
 export const LoginForm = () => (
     <View
@@ -29,6 +30,12 @@ export const LoginForm = () => (
             isSecondary="true"
             isInverted="true"
         />
+        <Radio value="test option" name="group">
+            Test Radio button
+        </Radio>
+        <Radio value="test option2" name="group">
+            Test Radio button2
+        </Radio>
     </View>
 );
 
