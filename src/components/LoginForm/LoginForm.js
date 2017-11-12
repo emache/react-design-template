@@ -3,7 +3,8 @@ import React from "react";
 import { View, Text } from "react-primitives";
 import styled from "styled-components";
 import { Button } from "./../Button/Button";
-import Textbox from "./../Textbox/Textbox";
+import Input from "./../Input/Input";
+import Radio from "./../Radio/Radio";
 
 export const LoginForm = () => (
     <View
@@ -15,7 +16,12 @@ export const LoginForm = () => (
             margin: 20
         }}
     >
-        <Textbox label="Label example" value="Placeholder" state="focus" />
+        <Input
+            label="Label example"
+            value="Filled text"
+            state="empty"
+            placeholder="Placeholder"
+        />
         <Button value="button primary" />
         <Button value="button primary inv" isInverted="true" />
         <Button value="button secondary" isSecondary="true" />
@@ -24,6 +30,12 @@ export const LoginForm = () => (
             isSecondary="true"
             isInverted="true"
         />
+        <Radio value="test option" name="group2">
+            Test Radio button
+        </Radio>
+        <Radio value="test option2" name="group" state="checkedDisabled">
+            Test Radio button2
+        </Radio>
     </View>
 );
 
