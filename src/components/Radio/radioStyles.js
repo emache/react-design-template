@@ -1,5 +1,10 @@
 // input styles
-import { colors, spacing, defaultTextStyle } from "../../branding/designSystem";
+import {
+    colors,
+    spacing,
+    defaultTextStyle,
+    disabledTextStyle
+} from "../../branding/designSystem";
 import tinycolor from "tinycolor2";
 
 const radioSize = 20;
@@ -72,9 +77,35 @@ export const radioWrapperStyle = `
         background: ${disabledColor};
         pointer-events: none;
     }
+
+    input:disabled {
+        ${disabledTextStyle};
+    }
+
     input:not(:checked) ~ div:after {
         opacity: 0;
         -webkit-transform: scale(0);
         transform: scale(0);
     }
 }`;
+
+// Rendering things for Sketch
+export const radioCheckedSketch = `
+    border: ${(radioSize - innerSize) / 2}px solid ${selectedColor};
+    background: ${innerColor};
+`;
+
+export const radioHoverSketch = `
+    border: 0;
+    background: ${unselectedColorHover};
+`;
+
+export const radioCheckedHoverSketch = `
+     border: ${(radioSize - innerSize) / 2}px solid ${selectedColor};
+    background: ${selectedColorHover};
+`;
+
+export const radioDisabledSketch = `
+    border: 0;
+    background: ${disabledColor};
+`;

@@ -18,7 +18,7 @@ const StyledRadio = styled.label`
 `;
 
 export const Radio = ({ value, children, name }: Props) => (
-    <StyledRadio name="Radio-button">
+    <StyledRadio>
         {children}
         <input type="radio" value={value} name={name} />
         <RadioBox />

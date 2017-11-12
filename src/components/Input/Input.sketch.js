@@ -16,7 +16,7 @@ const Label = styled.Text`
 
 const StyledInput = styled.Text`
     ${inputStyle};
-    ${({ state }) => (state === "focus" ? inputStyleFocus : "")};
+    ${({ state }) => (state === "focus" ? console.log("focused") : "")};
 `;
 
 const Input = ({ label, value, state, children }: Props) => (

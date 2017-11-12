@@ -30,10 +30,10 @@ export const LoginForm = () => (
             isSecondary="true"
             isInverted="true"
         />
-        <Radio value="test option" name="group">
+        <Radio value="test option" name="group2">
             Test Radio button
         </Radio>
-        <Radio value="test option2" name="group">
+        <Radio value="test option2" name="group" state="disabled">
             Test Radio button2
         </Radio>
     </View>
