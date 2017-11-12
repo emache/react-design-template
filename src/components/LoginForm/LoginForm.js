@@ -19,7 +19,7 @@ export const LoginForm = () => (
         <Input
             label="Label example"
             value="Filled text"
-            state="focus"
+            state="empty"
             placeholder="Placeholder"
         />
         <Button value="button primary" />

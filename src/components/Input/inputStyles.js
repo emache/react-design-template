@@ -21,6 +21,11 @@ export const inputStyleFocus = `
     outline: none;
 `;
 
+export const inputDisabledStyle = `
+    background-color: ${colors.grey30};
+    border-color: ${colors.grey70};
+`;
+
 export const inputStyle = `
     ${defaultTextStyle};
     width: 300px;
@@ -35,8 +40,7 @@ export const inputStyle = `
     }
 
     &:disabled {
-        background-color: ${colors.grey30};
-        border-color: ${colors.grey70};
+        ${inputDisabledStyle};
     }
 
     &::placeholder {

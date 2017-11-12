@@ -2,7 +2,13 @@
 import React from "react";
 import { View, Text } from "react-primitives";
 import styled from "styled-components/primitives";
-import { inputStyleFocus, inputStyle, inputLabelStyle } from "./inputStyles";
+import {
+    inputStyleFocus,
+    inputDisabledStyle,
+    inputStyle,
+    inputLabelStyle
+} from "./inputStyles";
+import { disabledTextStyle } from "../../branding/designSystem";
 
 type Props = {
     label: string,
@@ -16,7 +22,19 @@ const Label = styled.Text`
 
 const StyledInput = styled.Text`
     ${inputStyle};
-    ${({ state }) => (state === "focus" ? console.log("focused") : "")};
+    ${({ state }) => {
+        switch (state) {
+            case "focus":
+                return inputStyleFocus;
+                break;
+            case "disabled":
+                return inputDisabledStyle;
+                break;
+            case "empty":
+                return disabledTextStyle;
+                break;
+        }
+    }};
 `;
 
 const Input = ({ label, value, state, children }: Props) => (
