@@ -5,7 +5,7 @@ import { spacing } from "../branding/designSystem";
 import { sectionStyle } from "./sharedStyles";
 import styled from "styled-components/primitives";
 import Input from "../components/Input/Input";
-import { Radio } from "../components/Radio/Radio";
+import Radio from "../components/Radio/Radio";
 
 const Section = styled.View`
     ${sectionStyle};
@@ -15,13 +15,12 @@ const Section = styled.View`
 const Col = styled.View`
     min-width: 500px;
     padding: 20px;
-    border: 1px solid black;
     min-height: 500px;
 `;
 
 const Divider = styled.View`
     width: 500px;
-    height: 50px;
+    height: ${spacing.m}px;
 `;
 
 export default () => (
