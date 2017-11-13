@@ -9,6 +9,7 @@ import TypeGuide from "./styleguideComponents/TypeGuide";
 import Description from "./styleguideComponents/Description";
 import Title from "./styleguideComponents/Title";
 import Section from "./styleguideComponents/Section";
+import FormComponentsGuide from "./styleguideComponents/FormComponentsGuide";
 import LoginForm from "./components/LoginForm/LoginForm";
 import { fonts, coreColors } from "./branding/designSystem";
 import { brandColors, greyScale } from "./branding/sharedColors";
@@ -36,8 +37,12 @@ const DesignSystem = () => (
                 <TypeGuide />
             </Artboard>
         </Page>
-        <Page name="LoginForm">
-            <LoginForm />
+        <Page name="Components - Forms">
+            <Artboard name="01 Base elements" style={{ padding: 100 }}>
+                <Section title="Base Form elements">
+                    <FormComponentsGuide />
+                </Section>
+            </Artboard>
         </Page>
     </Document>
 );
@@ -45,3 +50,7 @@ const DesignSystem = () => (
 export default (context: any) => {
     render(<DesignSystem />, context.document.currentPage());
 };
+
+// <Page name="LoginForm">
+//             <LoginForm />
+//         </Page>
