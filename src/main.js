@@ -44,6 +44,13 @@ const DesignSystem = () => (
                 </Section>
             </Artboard>
         </Page>
+        <Page name="Forms">
+            <Artboard name="01 Base elements" style={{ padding: 100 }}>
+                <Section title="Base Form elements">
+                    <LoginForm />
+                </Section>
+            </Artboard>
+        </Page>
     </Document>
 );
 

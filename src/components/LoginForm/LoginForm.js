@@ -5,6 +5,7 @@ import styled from "styled-components";
 import { Button } from "./../Button/Button";
 import Input from "./../Input/Input";
 import Radio from "./../Radio/Radio";
+import Checkbox from "./../Checkbox/Checkbox";
 
 export const LoginForm = () => (
     <View
@@ -36,6 +37,9 @@ export const LoginForm = () => (
         <Radio value="test option2" name="group" state="checkedDisabled">
             Test Radio button2
         </Radio>
+        <Checkbox value="test option2" name="group" state="checkedDisabled">
+            Test Checkbox button2
+        </Checkbox>
     </View>
 );
 
