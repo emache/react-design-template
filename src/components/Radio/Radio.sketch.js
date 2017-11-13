@@ -42,7 +42,8 @@ const RadioBox = styled.View`
 
 const StyledRadio = styled.Text`
     ${radioWrapperStyle};
-    ${({ state }) => (state === "disabled" ? disabledTextStyle : "")};
+    ${({ state }) =>
+        state === "disabled" || "checkedDisabled" ? disabledTextStyle : ""};
 `;
 
 export const Radio = ({ children, state }: Props) => (
