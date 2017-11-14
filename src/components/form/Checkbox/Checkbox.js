@@ -11,6 +11,7 @@ type Props = {
 
 const CheckboxBox = styled.div`
     ${checkboxStyle};
+    background-image: url(../../icons/Tick);
 `;
 
 const StyledCheckbox = styled.label`

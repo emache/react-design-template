@@ -1,14 +1,14 @@
-// input styles
+// checkbox styles
 import {
     colors,
     spacing,
     defaultTextStyle,
     disabledTextStyle
-} from "../../branding/designSystem";
+} from "../../../branding/designSystem";
 import tinycolor from "tinycolor2";
 
-const radioSize = 20;
-const innerSize = radioSize / 2;
+const checkboxSize = 20;
+const innerSize = checkboxSize / 2;
 
 const unselectedColor = colors.grey70;
 const unselectedColorHover = tinycolor(unselectedColor).darken(10);
@@ -22,41 +22,38 @@ const labelTextStyle = `
     margin-bottom: 15px;
 `;
 
-export const radioBoxStyle = `
+export const checkboxStyle = `
     position: absolute;
-    top: 0px;
+    top: 0;
     left: 0;
-    height: ${radioSize}px;
-    width: ${radioSize}px;
+    height: ${checkboxSize}px;
+    width: ${checkboxSize}px;
     background: ${unselectedColor};
-    border-radius: 50%;
     &:after {
         content: "";
+        opacity: 1;
         position: absolute;
         display: block;
-        left: ${innerSize / 2}px;
-        top: ${innerSize / 2}px;
-        height: ${innerSize}px;
-        width: ${innerSize}px;
-        border-radius: 50%;
-        background: ${innerColor};
-        -webkit-transition: all 0.3s ease-out;
-        transition: all 0.3s ease-out;
-        -webkit-transform: scale(1);
-        transform: scale(1);
+        top: 4px;
+        left: 8px;
+        width: 3px;
+        height: 8px;
+        border: solid ${innerColor};
+        border-width: 0 2px 2px 0;
+        transform: rotate(45deg);
     }
 `;
 
-export const radioWrapperStyle = `
+export const checkboxWrapperStyle = `
     input {
         opacity: 0;
     }
 
     display: block;
     position: relative;
-    padding-left: ${radioSize + 10}px;
+    padding-left: ${checkboxSize + 10}px;
     cursor: pointer;
-    line-height: ${radioSize}px;
+    line-height: ${checkboxSize}px;
     ${labelTextStyle}
 
     &:hover input ~ div,
@@ -84,30 +81,14 @@ export const radioWrapperStyle = `
 
     input:not(:checked) ~ div:after {
         opacity: 0;
-        -webkit-transform: scale(0);
-        transform: scale(0);
     }
 }`;
 
-// Rendering things for Sketch
-export const radioCheckedSketch = `
-    border: ${(radioSize - innerSize) / 2}px solid ${selectedColor};
-    background: ${innerColor};
-`;
+// Rendering things for Sketc
 
-export const radioHoverSketch = `
+export const checkboxHoverSketch = `
     border: 0;
     background: ${unselectedColorHover};
-`;
-
-export const radioCheckedHoverSketch = `
-    border: ${(radioSize - innerSize) / 2}px solid ${selectedColorHover};
-    background: ${innerColor};
-`;
-
-export const radioCheckedDisabledSketch = `
-    border: ${(radioSize - innerSize) / 2}px solid ${disabledColor};
-    background: ${innerColor};
 `;
 
 export const radioDisabledSketch = `

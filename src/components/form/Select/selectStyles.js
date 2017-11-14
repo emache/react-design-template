@@ -7,40 +7,40 @@ import {
 } from "../../branding/designSystem";
 
 //input labels
-export const inputLabelStyle = `
+export const selectLabelStyle = `
     ${defaultTextStyle};
     margin-bottom: ${spacing.xs}px;
 `;
 
-//input containers
-const inputBorderColor = colors.primary.base;
-const inputBorderColorFocus = colors.accent.base;
+//select containers
+const selectBorderColor = colors.primary.base;
+const selectBorderColorFocus = colors.accent.base;
 
-export const inputStyleFocus = `
-    border: 1px solid ${inputBorderColorFocus};
+export const selectStyleFocus = `
+    border: 1px solid ${selectBorderColorFocus};
     outline: none;
 `;
 
-export const inputDisabledStyle = `
+export const selectDisabledStyle = `
     background-color: ${colors.grey30};
     border-color: ${colors.grey70};
 `;
 
-export const inputStyle = `
+export const selectStyle = `
     ${defaultTextStyle};
     width: 300px;
     height: 50px;
     box-sizing: border-box;
     padding: ${spacing.xs}px;
     margin-bottom: ${spacing.xs}px;
-    border: 1px solid ${inputBorderColor};
+    border: 1px solid ${selectBorderColor};
 
     &:focus {
-        ${inputStyleFocus};
+        ${selectStyleFocus};
     }
 
     &:disabled {
-        ${inputDisabledStyle};
+        ${selectDisabledStyle};
     }
 
     &::placeholder {
@@ -48,10 +48,10 @@ export const inputStyle = `
     }
 `;
 
-export const inputErrorStyle = `
+export const selectErrorStyle = `
     border-color: ${colors.failure.base};
 `;
 
-export const inputSucessStyle = `
+export const selectSucessStyle = `
     border-color: ${colors.success.base};
 `;

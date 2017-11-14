@@ -3,9 +3,9 @@ import React from "react";
 import { View, Text } from "react-primitives";
 import styled from "styled-components";
 import { Button } from "./../Button/Button";
-import Input from "./../Input/Input";
-import Radio from "./../Radio/Radio";
-import Checkbox from "./../Checkbox/Checkbox";
+import Input from "./../form/Input/Input";
+import Radio from "./../form/Radio/Radio";
+import Checkbox from "./../form/Checkbox/Checkbox";
 
 export const LoginForm = () => (
     <View
