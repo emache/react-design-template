@@ -1,18 +1,17 @@
-/* @flow */
 import React from "react";
 import { View } from "react-sketchapp";
-import Title from "./Title";
 import { spacing } from "../branding/designSystem";
-import { sectionStyle } from "./sharedStyles";
 import styled from "styled-components/primitives";
 
 const Section = styled.View`
-    ${sectionStyle};
+    margin-bottom: ${spacing.xl};
+    display: flex;
+    flex-direction: column;
+    &:last-child {
+        margin-bottom: 0;
+    }
 `;
 
-export default ({ title, children }) => (
-    <Section name={`${title} Wrapper`}>
-        <Title>{title}</Title>
-        {children}
-    </Section>
+export default ({ name, children }) => (
+    <Section name={`${name} Wrapper`}>{children}</Section>
 );

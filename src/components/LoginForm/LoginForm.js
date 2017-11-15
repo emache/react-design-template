@@ -1,41 +1,73 @@
-/* @flow */
 import React from "react";
 import { View, Text } from "react-primitives";
 import styled from "styled-components";
+import {
+    colors,
+    spacing,
+    h3TextStyle,
+    fontSize
+} from "./../../branding/designSystem";
 import { Button } from "./../Button/Button";
-import Input from "./../Input/Input";
-import Radio from "./../Radio/Radio";
+import Input from "./../form/Input/Input";
+import Radio from "./../form/Radio/Radio";
+import Checkbox from "./../form/Checkbox/Checkbox";
+
+const FormBlockWrapperStyle = {
+    marginBottom: spacing.xs
+};
+
+const PageTitle = styled(Text)`
+    ${h3TextStyle};
+`;
 
 export const LoginForm = () => (
     <View
         name="LoginForm"
         style={{
-            borderColor: "black",
-            borderWidth: 1,
-            padding: 20,
-            margin: 20
+            backgroundColor: colors.grey98,
+            paddingTop: spacing.m,
+            paddingBottom: spacing.m,
+            paddingLeft: spacing.l,
+            paddingRight: spacing.l,
+            margin: spacing.s,
+            width: 460,
+            boxSizing: "border-box"
         }}
     >
+        <PageTitle
+            style={{
+                fontSize: fontSize.xl,
+                fontFamily: "arial",
+                fontWeight: "bold",
+                color: colors.primaryText,
+                marginBottom: spacing.s
+            }}
+        >
+            Enter the Santa Giveaway
+        </PageTitle>
+        <Input label="Name" value="" state="empty" placeholder="Santa Claus" />
         <Input
-            label="Label example"
-            value="Filled text"
+            label="Email"
+            value=""
             state="empty"
-            placeholder="Placeholder"
+            placeholder="Santa@example.com"
         />
-        <Button value="button primary" />
-        <Button value="button primary inv" isInverted="true" />
-        <Button value="button secondary" isSecondary="true" />
-        <Button
-            value="button secondary inv"
-            isSecondary="true"
-            isInverted="true"
-        />
-        <Radio value="test option" name="group2">
-            Test Radio button
-        </Radio>
-        <Radio value="test option2" name="group" state="checkedDisabled">
-            Test Radio button2
-        </Radio>
+        <View style={FormBlockWrapperStyle}>
+            <Radio value="test option" name="group">
+                I believe in Santa
+            </Radio>
+
+            <Radio value="test option2" name="group">
+                I don't believe in Santa
+            </Radio>
+        </View>
+
+        <Checkbox value="test option2" name="group" state="checkedDisabled">
+            I want to hear more about the Elf Factory
+        </Checkbox>
+
+        <Button value="Submit" />
+        <Button value="Cancel" isInverted="true" />
     </View>
 );
 

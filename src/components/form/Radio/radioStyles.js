@@ -1,25 +1,25 @@
-// input styles
+// radio styles
 import {
     colors,
     spacing,
     defaultTextStyle,
     disabledTextStyle
-} from "../../branding/designSystem";
+} from "../../../branding/designSystem";
 import tinycolor from "tinycolor2";
 
 const radioSize = 20;
 const innerSize = radioSize / 2;
 
-const unselectedColor = colors.grey70;
+const unselectedColor = colors.grey78;
 const unselectedColorHover = tinycolor(unselectedColor).darken(10);
 const selectedColor = colors.accent.base;
 const selectedColorHover = colors.accent.darker;
-const disabledColor = colors.grey30;
+const disabledColor = colors.grey95;
 const innerColor = colors.white;
 
-const labelTextStyle = `
+export const labelTextStyle = `
     ${defaultTextStyle};
-    margin-bottom: 15px;
+    margin-bottom: ${spacing.xs}px;
 `;
 
 export const radioBoxStyle = `

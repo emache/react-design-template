@@ -1,5 +1,8 @@
-// input styles
-import { colors, spacing } from "../../branding/designSystem";
+import {
+    colors,
+    spacing,
+    disabledTextStyle
+} from "../../branding/designSystem";
 import tinycolor from "tinycolor2";
 
 export const primaryButtonColor = colors.primary.base;
@@ -14,10 +17,10 @@ export const secondaryButtonBgColorActive = tinycolor(
     secondaryButtonBgColorHover
 ).darken(10);
 
-export const buttonBgColorDisabled = colors.grey30;
+export const buttonBgColorDisabled = colors.grey95;
 
 const baseButtonStyle = `
-    width: 300px;
+    min-width: 300px;
     height: 50px;
     box-sizing: border-box;
     padding: ${spacing.xs}px;
@@ -37,7 +40,7 @@ const baseButtonStyle = `
 
     &:disabled {
         background-color: ${buttonBgColorDisabled};
-        color: ${colors.grey70}
+        color: ${colors.white};
     }
 `;
 

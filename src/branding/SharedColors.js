@@ -22,13 +22,16 @@ const colorShades = (baseColor, lighterColor, darkerColor) => {
 };
 
 export const brandColors = {
-    Night: colorShades("#2F3137", "#5A89A8", "#071F2E"),
+    Night: colorShades("#333A41", "#47535F"),
     Sur: colorShades("#96DBE4"),
     Peach: colorShades("#EFADA0", "", "#984838"),
-    Tomato: colorShades("#E37059", "#E2806D", "#B53117"),
-    Pear: colorShades("#93DAAB", "#B1DFC1"),
-    Lemon: colorShades("#F8D61B"),
-    Pink: colorShades("#FF10B6")
+    Sky: colorShades("#5BCCFF", "#97DFFF", "#47BAEE"),
+    Tomato: colorShades("#FF7761", "#FF8E7C", "#ED533A"),
+    Pear: colorShades("#85D266", "#9DE381", "#65AF47"),
+    Lemon: colorShades("#FFC961", "#FFDA92", "#F7AB18"),
+    Pink: colorShades("#E989DE", "#F2ACEA", "#D561C8"),
+    Lilac: colorShades("#A889E9", "#BFA2FA", "#926BE4"),
+    Aquamarine: colorShades("#6670D2", "#828AD8", "#555FC1")
 };
 
 export const greyScale = {
@@ -37,5 +40,12 @@ export const greyScale = {
     Grey30: "rgba(47,49,55,0.30)",
     Grey10: "rgba(47,49,55,0.10)",
     Grey3: "rgba(47,49,55,0.50)",
+    Grey45: "#626772",
+    Grey59: "#828897",
+    Grey78: "#B3B9C7",
+    Grey84: "#C3C9D7",
+    Grey91: "#DCE0E9",
+    Grey95: "#E8EBF2",
+    Grey98: "#F7F8FB",
     White: "#FFFFFF"
 };

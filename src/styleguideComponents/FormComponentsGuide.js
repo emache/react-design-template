@@ -1,59 +1,110 @@
-/* @flow */
 import React from "react";
-import { View } from "react-sketchapp";
+import { View, Text } from "react-sketchapp";
 import { spacing } from "../branding/designSystem";
-import { sectionStyle } from "./sharedStyles";
+import Section from "./Section";
 import styled from "styled-components/primitives";
-import Input from "../components/Input/Input";
-import Radio from "../components/Radio/Radio";
+import { Annotation, Title, SecondaryTitle } from "./typography";
+import Input from "../components/form/Input/Input";
+import Radio from "../components/form/Radio/Radio";
+import Checkbox from "../components/form/Checkbox/Checkbox";
 
-const Section = styled.View`
-    ${sectionStyle};
+const Row = styled.View`
     flex-direction: row;
+    margin-bottom: ${spacing.s}px;
 `;
 
 const Col = styled.View`
-    min-width: 500px;
-    padding: 20px;
-    min-height: 500px;
-`;
-
-const Divider = styled.View`
-    width: 500px;
-    height: ${spacing.m}px;
+    margin-right: ${spacing.m}px;
 `;
 
 export default () => (
-    <Section name="Components">
-        <Col name="1">
-            <Input label="Input label" value="Placeholder" state="empty" />
-            <Divider />
-            <Input label="Input label" value="Focused field" state="focus" />
-            <Divider />
-            <Input
-                label="Input label"
-                value="Disabled field"
-                state="disabled"
-            />
-            <Divider />
-            <Radio value="" name="radio-unchecked" state="unchecked">
-                Radio button, unchecked
-            </Radio>
-            <Radio value="" name="radio-unchecked" state="hover">
-                Radio button, unchecked hover
-            </Radio>
-            <Radio value="" name="radio-checked" state="checked">
-                Radio button, checked
-            </Radio>
-            <Radio value="" name="radio-checked" state="checkedHover">
-                Radio button, checked hover
-            </Radio>
-            <Radio value="" name="radio-checked" state="disabled">
-                Radio button, unchecked disabled
-            </Radio>
-            <Radio value="" name="radio-checked" state="checkedDisabled">
-                Radio button, checked disabled
-            </Radio>
-        </Col>
-    </Section>
+    <View name="Form component Guide">
+        <Section name="Inputs">
+            <SecondaryTitle>Input fields</SecondaryTitle>
+            <Annotation>
+                Forms share some basic styles. Those include the containers
+                styles for text boxes, select dropdowns and checkboxes; text
+                styles for form labels; and some element margins and paddings.
+            </Annotation>
+            <Row>
+                <Col>
+                    <Input
+                        label="Input: empty with placeholder"
+                        value="Placeholder"
+                        state="empty"
+                    />
+                    <Input
+                        label="Input: focused & filler"
+                        value="Filled text"
+                        state="focus"
+                    />
+                </Col>
+                <Col>
+                    <Input label="Input: filled text" value="Filled text" />
+                    <Input
+                        label="Input: disabled"
+                        value="Disabled"
+                        state="disabled"
+                    />
+                </Col>
+            </Row>
+        </Section>
+        <Section name="Radio">
+            <SecondaryTitle>Radio buttons</SecondaryTitle>
+            <Annotation>
+                Radio buttons share limited styles with input fields, only the
+                colors.
+            </Annotation>
+
+            <Row>
+                <Col>
+                    <Radio value="" name="radio-unchecked" state="unchecked">
+                        Radio button, unchecked
+                    </Radio>
+                    <Radio value="" name="radio-unchecked" state="hover">
+                        Radio button, unchecked hover
+                    </Radio>
+                </Col>
+                <Col>
+                    <Radio value="" name="radio-checked" state="checked">
+                        Radio button, checked
+                    </Radio>
+                    <Radio value="" name="radio-checked" state="checkedHover">
+                        Radio button, checked hover
+                    </Radio>
+                </Col>
+                <Col>
+                    <Radio value="" name="radio-checked" state="disabled">
+                        Radio button, unchecked disabled
+                    </Radio>
+                    <Radio
+                        value=""
+                        name="radio-checked"
+                        state="checkedDisabled"
+                    >
+                        Radio button, checked disabled
+                    </Radio>
+                </Col>
+            </Row>
+        </Section>
+        <Section name="Checkboxes">
+            <SecondaryTitle>Checkboxes</SecondaryTitle>
+            <Annotation>
+                Checkboxes share the same base container style as input fields.
+                Cannot render the checked status as SVG rendering isn't yet
+                supported
+            </Annotation>
+            <Row>
+                <Col>
+                    <Checkbox value="">Checkbox unchecked</Checkbox>
+                    <Checkbox value="" state="hover">
+                        Checkbox unchecked, hover
+                    </Checkbox>
+                    <Checkbox value="" state="disabled">
+                        Checkbox disabled
+                    </Checkbox>
+                </Col>
+            </Row>
+        </Section>
+    </View>
 );

@@ -1,8 +1,8 @@
-/* @flow */
 import React from "react";
 import { View, Text } from "react-sketchapp";
 import styled from "styled-components/primitives";
 import { fontChipStyle } from "./sharedStyles";
+import { SecondaryTitle } from "./typography";
 import {
     displayTextStyle,
     defaultTextStyle,
@@ -117,7 +117,8 @@ const TextSampleContainer = styled.View`
 `;
 
 const TypeGuide = () => (
-    <View>
+    <View name="TypeGuide">
+        <SecondaryTitle>Fonts</SecondaryTitle>
         <FontChipContainer name="Typography guide">
             <FontChip name="Header font chip">
                 <Sample font={fontFamilies.header}>Aa - Zz </Sample>
@@ -128,12 +129,18 @@ const TypeGuide = () => (
                 <Legend>Body font: {fontFamilies.body}</Legend>
             </FontChip>
         </FontChipContainer>
+
         <TextSampleContainer>
-            <DisplayText>The quick fox jumps over the lazy dog</DisplayText>
-            <H1Text>The quick fox jumps over the lazy dog</H1Text>
-            <H2Text>The quick fox jumps over the lazy dog</H2Text>
-            <H3Text>The quick fox jumps over the lazy dog</H3Text>
-            <LargeText>The quick fox jumps over the lazy dog</LargeText>
+            <SecondaryTitle>Headings</SecondaryTitle>
+            <DisplayText>
+                Display | The quick fox jumps over the lazy dog
+            </DisplayText>
+            <H1Text>H1 | The quick fox jumps over the lazy dog</H1Text>
+            <H2Text>H2 | The quick fox jumps over the lazy dog</H2Text>
+            <H3Text>H3 | The quick fox jumps over the lazy dog</H3Text>
+            <LargeText>Large | The quick fox jumps over the lazy dog</LargeText>
+
+            <SecondaryTitle>Body text</SecondaryTitle>
             <DefaultText>The quick fox jumps over the lazy dog</DefaultText>
             <SecondaryText>
                 Default text can also take different variations -- Body
