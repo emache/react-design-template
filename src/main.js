@@ -7,6 +7,7 @@ import Palette from "./styleguideComponents/Palette";
 import PaletteNoShade from "./styleguideComponents/PaletteNoShade";
 import TypeGuide from "./styleguideComponents/TypeGuide";
 import FormComponentsGuide from "./styleguideComponents/FormComponentsGuide";
+import ButtonsGuide from "./styleguideComponents/ButtonsGuide";
 import LoginForm from "./components/LoginForm/LoginForm";
 import { fonts, coreColors, spacing } from "./branding/designSystem";
 import { brandColors, greyScale } from "./branding/sharedColors";
@@ -86,8 +87,20 @@ const DesignSystem = () => (
                 </Container>
             </Artboard>
         </Page>
-        <Page name="Components - Forms">
-            <Artboard name="01 Form Base elements">
+        <Page name="Components">
+            <Artboard
+                name="01 Buttons"
+                style={{ position: "absolute", left: 0, top: 0 }}
+            >
+                <GuideHeader title="Buttons">Buttons elements</GuideHeader>
+                <Container name="Buttons elements">
+                    <ButtonsGuide />
+                </Container>
+            </Artboard>
+            <Artboard
+                name="02 Form Base elements"
+                style={{ position: "absolute", left: 1540, top: 0 }}
+            >
                 <GuideHeader title="Form: base elements">
                     Basic elements for forms and their different states, if
                     applicable. {"\n"}
