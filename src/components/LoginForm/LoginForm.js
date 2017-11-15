@@ -14,7 +14,8 @@ export const LoginForm = () => (
             borderColor: "black",
             borderWidth: 1,
             padding: 20,
-            margin: 20
+            margin: 20,
+            width: 500,
         }}
     >
         <Input

@@ -4,17 +4,13 @@ import { View, Text } from "react-primitives";
 import styled from "styled-components/primitives";
 import {
     inputStyleFocus,
-    inputDisabledStyle,
+    inputStyleDisabled,
     inputStyle,
-    inputLabelStyle
+    inputLabelStyle,
+    inputWrapperStyle
 } from "./inputStyles";
-import { disabledTextStyle } from "../../../branding/designSystem";
 
-type Props = {
-    label: string,
-    value: string,
-    children?: React$Element<any>
-};
+import { disabledTextStyle } from "../../../branding/designSystem";
 
 const Label = styled.Text`
     ${inputLabelStyle};
@@ -28,7 +24,7 @@ const StyledInput = styled.Text`
                 return inputStyleFocus;
                 break;
             case "disabled":
-                return inputDisabledStyle;
+                return inputStyleDisabled;
                 break;
             case "empty":
                 return disabledTextStyle;
@@ -37,11 +33,16 @@ const StyledInput = styled.Text`
     }};
 `;
 
+
+const InputWrapper = styled.View`
+    ${inputWrapperStyle}
+`;
+
 const Input = ({ label, value, state, children }: Props) => (
-    <View name="Input-field">
+    <InputWrapper name="Input-field">
         <Label>{label}</Label>
         <StyledInput state={state}>{value}</StyledInput>
-    </View>
+    </InputWrapper>
 );
 
 export default Input;
