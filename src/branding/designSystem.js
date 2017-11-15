@@ -96,7 +96,7 @@ export const disabledTextStyle = `
         .toRgbString()}; `;
 
 export const accentTextStyle = `
-    color: ${colors.primaryText} `;
+    color: ${colors.primary.base} `;
 
 export const linkStyleHover = `
     text-decoration: none ;
@@ -154,7 +154,7 @@ export const largeTextStyle = `
 
 // Heading styles
 export const displayTextStyle = `
-    ${accentTextStyle};
+    ${primaryTextStyle};
     font-size: ${fontSize.display}px;
     font-family: ${fontFamilies.header};
     font-weight: ${fontWeights.bold};
@@ -162,7 +162,7 @@ export const displayTextStyle = `
 `;
 
 export const h1TextStyle = `
-    ${accentTextStyle};
+    ${primaryTextStyle};
     font-size: ${fontSize.xxxl}px;
     font-family: ${fontFamilies.header};
     font-weight: ${fontWeights.bold};
@@ -170,7 +170,7 @@ export const h1TextStyle = `
 `;
 
 export const h2TextStyle = `
-    ${accentTextStyle};
+    ${primaryTextStyle};
     font-size: ${fontSize.xxl}px;
     font-family: ${fontFamilies.header};
     font-weight: ${fontWeights.bold};
@@ -178,7 +178,7 @@ export const h2TextStyle = `
 `;
 
 export const h3TextStyle = `
-    ${accentTextStyle};
+    ${primaryTextStyle};
     font-size: ${fontSize.xl}px;
     font-family: ${fontFamilies.header};
     font-weight: ${fontWeights.bold};
