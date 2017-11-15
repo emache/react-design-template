@@ -8,16 +8,14 @@ import {
     disabledTextStyle
 } from "../../branding/designSystem";
 
-
 // Default form labels
 export const formLabelStyle = `
     ${defaultTextStyle};
 `;
 
 // Default containers styles
-const inputBorderColor = colors.primary.base;
-const inputBorderColorFocus = colors.accent.base;
-
+export const inputBorderColor = colors.primary.base;
+export const inputBorderColorFocus = colors.accent.base;
 
 export const containerStyleDefault = `
     box-sizing: border-box;
@@ -37,8 +35,8 @@ export const containerStyleDisabled = `
 `;
 
 export const formItemWrapper = `
-    margin-bottom: ${spacing.xs}px;
-`
+    margin-bottom: ${spacing.m}px;
+`;
 
 export const containerStyle = `
     ${defaultTextStyle};
@@ -64,5 +62,3 @@ export const containerStyleError = `
 export const containerStyleSucess = `
     border-color: ${colors.success.base};
 `;
-
-

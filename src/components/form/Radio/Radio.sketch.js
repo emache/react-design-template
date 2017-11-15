@@ -1,4 +1,3 @@
-/* @flow */
 import React from "react";
 import { View, Text } from "react-primitives";
 import styled from "styled-components/primitives";
@@ -12,10 +11,6 @@ import {
     radioDisabledSketch,
     radioCheckedDisabledSketch
 } from "./radioStyles";
-type Props = {
-    state: string,
-    children?: React$Element<any>
-};
 
 const RadioBox = styled.View`
     ${radioBoxStyle};
@@ -42,11 +37,19 @@ const RadioBox = styled.View`
 
 const StyledRadio = styled.Text`
     ${radioWrapperStyle};
-    ${({ state }) =>
-        state === "disabled" || "checkedDisabled" ? disabledTextStyle : ""};
+    ${({ state }) => {
+        switch (state) {
+            case "disabled":
+                return disabledTextStyle;
+                break;
+            case "checkedDisabled":
+                return disabledTextStyle;
+                break;
+        }
+    }};
 `;
 
-export const Radio = ({ children, state }: Props) => (
+export const Radio = ({ children, state }) => (
     <StyledRadio name="Radio-button" state={state}>
         {children}
         <RadioBox state={state} />

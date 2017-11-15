@@ -1,4 +1,4 @@
-// input styles
+// radio styles
 import {
     colors,
     spacing,
@@ -17,9 +17,9 @@ const selectedColorHover = colors.accent.darker;
 const disabledColor = colors.grey30;
 const innerColor = colors.white;
 
-const labelTextStyle = `
+export const labelTextStyle = `
     ${defaultTextStyle};
-    margin-bottom: 15px;
+    margin-bottom: ${spacing.xs}px;
 `;
 
 export const radioBoxStyle = `

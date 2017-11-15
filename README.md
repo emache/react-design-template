@@ -23,7 +23,6 @@ npm run link-plugin
 Then, open Sketch and navigate to `Plugins → react-sketchapp: Styleguide`
 
  
-
 * SVG render is currently not supported in Sketch, thus causing limitations for rendering icons and the likes
 
 * Using beta 2 as beta 5 doesn't seem to render Text items the same way.

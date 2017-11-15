@@ -75,10 +75,10 @@ export const primaryTextStyle = `
     color: ${colors.primary.base} `;
 
 export const secondaryTextStyle = `
-    color: ${colors.grey30} `;
+    color: ${colors.grey70} `;
 
 export const disabledTextStyle = `
-    color: ${colors.grey70} `;
+    color: ${colors.grey30} `;
 
 export const accentTextStyle = `
     color: ${colors.accent.darker} `;
@@ -86,7 +86,7 @@ export const accentTextStyle = `
 export const linkStyleHover = `
     text-decoration: none ;
     font-weight: ${fontWeights.bold};
-    color: ${colors.accent.darker};
+    color: ${colors.accent.darker}
 `;
 export const linkStyle = `
     color: ${colors.accent.base};
@@ -110,28 +110,28 @@ export const defaultTextStyle = `
     font-size: ${fontSize.body}px;
     font-family: ${fontFamilies.body};
     font-weight: ${fontWeights.regular};
-    ${primaryTextStyle};
+    ${primaryTextStyle}
 `;
 
 export const smallTextStyle = `
     ${secondaryTextStyle};
     font-size: ${fontSize.s}px;
     font-family: ${fontFamilies.body};
-    font-weight: ${fontWeights.bold};
+    font-weight: ${fontWeights.bold}
 `;
 
 export const extraSmallTextStyle = `
     ${secondaryTextStyle};
     font-size: ${fontSize.xs}px;
     font-family: ${fontFamilies.body};
-    font-weight: ${fontWeights.bold};
+    font-weight: ${fontWeights.bold}
 `;
 
 export const largeTextStyle = `
     ${accentTextStyle};
     font-size: ${fontSize.l}px;
     font-family: ${fontFamilies.body};
-    font-weight: ${fontWeights.bold};
+    font-weight: ${fontWeights.bold}
 `;
 
 // Heading styles
@@ -139,26 +139,26 @@ export const displayTextStyle = `
     ${accentTextStyle};
     font-size: ${fontSize.display}px;
     font-family: ${fontFamilies.header};
-    font-weight: ${fontWeights.bold};
+    font-weight: ${fontWeights.bold}
 `;
 
 export const h1TextStyle = `
     ${accentTextStyle};
     font-size: ${fontSize.xxxl}px;
     font-family: ${fontFamilies.header};
-    font-weight: ${fontWeights.bold};
+    font-weight: ${fontWeights.bold}
 `;
 
 export const h2TextStyle = `
     ${accentTextStyle};
     font-size: ${fontSize.xxl}px;
     font-family: ${fontFamilies.header};
-    font-weight: ${fontWeights.bold};
+    font-weight: ${fontWeights.bold}
 `;
 
 export const h3TextStyle = `
     ${accentTextStyle};
     font-size: ${fontSize.xl}px;
     font-family: ${fontFamilies.header};
-    font-weight: ${fontWeights.bold};
+    font-weight: ${fontWeights.bold}
 `;

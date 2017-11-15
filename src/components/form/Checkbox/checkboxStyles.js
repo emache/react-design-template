@@ -2,11 +2,19 @@
 import {
     colors,
     defaultTextStyle,
-    disabledTextStyle
+    disabledTextStyle,
+    spacing
 } from "../../../branding/designSystem";
 import tinycolor from "tinycolor2";
-import { inputBorderColor, inputBorderColorFocus, containerStyle, containerStyleFocus,
-    formLabelStyle, formItemWrapper,containerStyleDisabled } from "../sharedFormStyles";
+import {
+    inputBorderColor,
+    inputBorderColorFocus,
+    containerStyle,
+    containerStyleFocus,
+    formLabelStyle,
+    formItemWrapper,
+    containerStyleDisabled
+} from "../sharedFormStyles";
 
 const checkboxSize = 20;
 const unselectedColor = inputBorderColor;
@@ -16,7 +24,6 @@ const selectedColorHover = colors.accent.darker;
 const disabledColor = colors.grey30;
 const innerColor = colors.white;
 const tickWidth = 2;
-
 
 const labelTextStyle = `
     ${defaultTextStyle};
@@ -35,10 +42,10 @@ export const checkboxStyle = `
         opacity: 1;
         position: absolute;
         display: block;
-        top:${checkboxSize/6}px;
-        left: ${3*checkboxSize/8}px;
-        width: ${(checkboxSize/4)-tickWidth}px;
-        height: ${(checkboxSize/2)-tickWidth}px;
+        top:${checkboxSize / 6}px;
+        left: ${3 * checkboxSize / 8}px;
+        width: ${checkboxSize / 4 - tickWidth}px;
+        height: ${checkboxSize / 2 - tickWidth}px;
         border: solid ${innerColor};
         border-width: 0 ${tickWidth}px ${tickWidth}px 0;
         transform: rotate(45deg);
@@ -56,7 +63,7 @@ export const checkboxWrapperStyle = `
     cursor: pointer;
     line-height: ${checkboxSize}px;
     ${labelTextStyle}
-    ${formItemWrapper}
+    margin-bottom: ${spacing.xs}px;
 
     &:hover input ~ div,
     input:focus ~ div {

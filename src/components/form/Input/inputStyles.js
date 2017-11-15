@@ -1,11 +1,15 @@
 // input styles
+import { spacing } from "../../../branding/designSystem";
 import {
-    spacing
-} from "../../../branding/designSystem";
-import { containerStyle, formLabelStyle, formItemWrapper, containerStyleFocus,containerStyleDisabled } from "../sharedFormStyles";
-
+    containerStyle,
+    formLabelStyle,
+    formItemWrapper,
+    containerStyleFocus,
+    containerStyleDisabled
+} from "../sharedFormStyles";
 
 export const inputLabelStyle = `
+    ${formLabelStyle};
     margin-bottom: ${spacing.xs}px;
 `;
 
@@ -22,7 +26,7 @@ export const inputWrapperStyle = `
     flex-direction: column;
 `;
 
-export const inputStylesFocus = `
+export const inputStyleFocus = `
     ${containerStyleFocus}
 `;
 
