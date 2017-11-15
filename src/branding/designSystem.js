@@ -1,4 +1,3 @@
-// @flow
 // Global Design System settings: shared colors, text, spacing, grid.
 import { brandColors, greyScale } from "./sharedColors";
 
@@ -110,28 +109,32 @@ export const defaultTextStyle = `
     font-size: ${fontSize.body}px;
     font-family: ${fontFamilies.body};
     font-weight: ${fontWeights.regular};
-    ${primaryTextStyle}
+    ${primaryTextStyle};
+    margin-bottom: ${spacing.xs}px
 `;
 
 export const smallTextStyle = `
     ${secondaryTextStyle};
     font-size: ${fontSize.s}px;
     font-family: ${fontFamilies.body};
-    font-weight: ${fontWeights.bold}
+    font-weight: ${fontWeights.bold};
+    margin-bottom: ${spacing.xs}px
 `;
 
 export const extraSmallTextStyle = `
     ${secondaryTextStyle};
     font-size: ${fontSize.xs}px;
     font-family: ${fontFamilies.body};
-    font-weight: ${fontWeights.bold}
+    font-weight: ${fontWeights.bold};
+    margin-bottom: ${spacing.xs}px
 `;
 
 export const largeTextStyle = `
     ${accentTextStyle};
     font-size: ${fontSize.l}px;
     font-family: ${fontFamilies.body};
-    font-weight: ${fontWeights.bold}
+    font-weight: ${fontWeights.bold};
+    margin-bottom: ${spacing.s}px
 `;
 
 // Heading styles
@@ -139,26 +142,30 @@ export const displayTextStyle = `
     ${accentTextStyle};
     font-size: ${fontSize.display}px;
     font-family: ${fontFamilies.header};
-    font-weight: ${fontWeights.bold}
+    font-weight: ${fontWeights.bold};
+    margin-bottom: ${spacing.m}px
 `;
 
 export const h1TextStyle = `
     ${accentTextStyle};
     font-size: ${fontSize.xxxl}px;
     font-family: ${fontFamilies.header};
-    font-weight: ${fontWeights.bold}
+    font-weight: ${fontWeights.bold};
+    margin-bottom: ${spacing.s}px
 `;
 
 export const h2TextStyle = `
     ${accentTextStyle};
     font-size: ${fontSize.xxl}px;
     font-family: ${fontFamilies.header};
-    font-weight: ${fontWeights.bold}
+    font-weight: ${fontWeights.bold};
+    margin-bottom: ${spacing.s}px
 `;
 
 export const h3TextStyle = `
     ${accentTextStyle};
     font-size: ${fontSize.xl}px;
     font-family: ${fontFamilies.header};
-    font-weight: ${fontWeights.bold}
+    font-weight: ${fontWeights.bold};
+    margin-bottom: ${spacing.s}px
 `;

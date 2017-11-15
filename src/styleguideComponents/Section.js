@@ -7,9 +7,11 @@ const Section = styled.View`
     margin-bottom: ${spacing.xl};
     display: flex;
     flex-direction: column;
-    width: 1200px;
+    &:last-child {
+        margin-bottom: 0;
+    }
 `;
 
-export default ({ title, children }) => (
-    <Section name={`${title} Wrapper`}>{children}</Section>
+export default ({ name, children }) => (
+    <Section name={`${name} Wrapper`}>{children}</Section>
 );

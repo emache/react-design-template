@@ -1,4 +1,3 @@
-// input styles
 import { spacing } from "../../../branding/designSystem";
 import {
     containerStyle,

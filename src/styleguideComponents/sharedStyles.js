@@ -18,5 +18,5 @@ export const fontChipStyle = `
     padding: ${spacing.xs}px;
     border: 1px solid ${colors.grey70};
     align-items: center;
-    margin: ${spacing.s}px;
+    margin-right: ${spacing.m}px;
 `;

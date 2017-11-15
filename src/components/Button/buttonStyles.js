@@ -1,4 +1,3 @@
-// input styles
 import { colors, spacing } from "../../branding/designSystem";
 import tinycolor from "tinycolor2";
 
@@ -17,7 +16,7 @@ export const secondaryButtonBgColorActive = tinycolor(
 export const buttonBgColorDisabled = colors.grey30;
 
 const baseButtonStyle = `
-    width: 300px;
+    min-width: 300px;
     height: 50px;
     box-sizing: border-box;
     padding: ${spacing.xs}px;

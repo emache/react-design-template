@@ -1,4 +1,3 @@
-/* @flow */
 import React from "react";
 import { View, Text } from "react-primitives";
 import styled from "styled-components/primitives";
@@ -33,9 +32,8 @@ const StyledInput = styled.Text`
     }};
 `;
 
-
 const InputWrapper = styled.View`
-    ${inputWrapperStyle}
+    ${inputWrapperStyle};
 `;
 
 const Input = ({ label, value, state, children }: Props) => (
