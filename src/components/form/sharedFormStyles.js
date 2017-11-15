@@ -4,18 +4,25 @@
 import {
     colors,
     spacing,
+    primaryTextStyle,
+    disabledTextStyle,
     defaultTextStyle,
-    disabledTextStyle
+    boldText,
+    fontSize
 } from "../../branding/designSystem";
 
 // Default form labels
 export const formLabelStyle = `
     ${defaultTextStyle};
+    ${boldText};
+    text-transform: uppercase;
+    fontSize: ${fontSize.xs};
+    width: 300px;
 `;
 
 // Default containers styles
-export const inputBorderColor = colors.primary.base;
-export const inputBorderColorFocus = colors.accent.base;
+export const inputBorderColor = colors.grey78;
+export const inputBorderColorFocus = colors.primary.base;
 
 export const containerStyleDefault = `
     box-sizing: border-box;
@@ -29,8 +36,8 @@ export const containerStyleFocus = `
 `;
 
 export const containerStyleDisabled = `
-    background-color: ${colors.grey30};
-    border-color: ${colors.grey70};
+    background-color: ${colors.grey98};
+    border-color: ${inputBorderColor};
     pointer-events: none;
 `;
 

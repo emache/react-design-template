@@ -10,11 +10,11 @@ import tinycolor from "tinycolor2";
 const radioSize = 20;
 const innerSize = radioSize / 2;
 
-const unselectedColor = colors.grey70;
+const unselectedColor = colors.grey78;
 const unselectedColorHover = tinycolor(unselectedColor).darken(10);
 const selectedColor = colors.accent.base;
 const selectedColorHover = colors.accent.darker;
-const disabledColor = colors.grey30;
+const disabledColor = colors.grey95;
 const innerColor = colors.white;
 
 export const labelTextStyle = `

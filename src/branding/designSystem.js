@@ -1,28 +1,37 @@
 // Global Design System settings: shared colors, text, spacing, grid.
 import { brandColors, greyScale } from "./sharedColors";
+import tinycolor from "tinycolor2";
 
 // Global color names
 // Favor generic names to actual color names.
 export const colors = {
-    primary: brandColors.Night,
-    secondary: brandColors.Peach,
-    accent: brandColors.Sur,
+    primary: brandColors.Aquamarine,
+    secondary: brandColors.Sky,
+    accent: brandColors.Lilac,
     success: brandColors.Pear,
     warning: brandColors.Lemon,
     failure: brandColors.Tomato,
+    primaryText: brandColors.Night.base,
     black: greyScale.Black,
     grey70: greyScale.Grey70,
     grey30: greyScale.Grey30,
     grey10: greyScale.Grey10,
-    grey03: greyScale.Grey3,
+    grey3: greyScale.Grey3,
+    grey45: greyScale.Grey45,
+    grey59: greyScale.Grey59,
+    grey78: greyScale.Grey78,
+    grey84: greyScale.Grey84,
+    grey91: greyScale.Grey91,
+    grey95: greyScale.Grey95,
+    grey98: greyScale.Grey98,
     white: greyScale.White
 };
 
 // The core colors are only created for the purpose of generating a Palette in the style guide
 export const coreColors = {
-    primary: brandColors.Night,
-    secondary: brandColors.Peach,
-    accent: brandColors.Sur,
+    primary: brandColors.Aquamarine,
+    secondary: brandColors.Sky,
+    accent: brandColors.Lilac,
     success: brandColors.Pear,
     warning: brandColors.Lemon,
     failure: brandColors.Tomato
@@ -70,25 +79,31 @@ export const spacing = {
 // Typographic styles
 
 // Typographic colors
+export const boldText = `
+    font-weight: ${fontWeights.bold};
+`;
 export const primaryTextStyle = `
-    color: ${colors.primary.base} `;
+    color: ${colors.primaryText} `;
 
 export const secondaryTextStyle = `
-    color: ${colors.grey70} `;
+    color: ${tinycolor(colors.primaryText)
+        .setAlpha(0.8)
+        .toRgbString()} `;
 
 export const disabledTextStyle = `
-    color: ${colors.grey30} `;
+    color: ${tinycolor(colors.primaryText)
+        .setAlpha(0.5)
+        .toRgbString()}; `;
 
 export const accentTextStyle = `
-    color: ${colors.accent.darker} `;
+    color: ${colors.primaryText} `;
 
 export const linkStyleHover = `
     text-decoration: none ;
-    font-weight: ${fontWeights.bold};
     color: ${colors.accent.darker}
 `;
 export const linkStyle = `
-    color: ${colors.accent.base};
+    color: ${colors.primaryText};
     text-decoration: underline;
 
     &:hover {
@@ -96,13 +111,13 @@ export const linkStyle = `
     }`;
 
 export const successTextStyle = `
-    color: ${colors.success.base} `;
+    color: ${colors.success.darker} `;
 
 export const warningTextStyle = `
     color: ${colors.warning.darker} `;
 
 export const failureTextStyle = `
-    color: ${colors.failure.base} `;
+    color: ${colors.failure.darker} `;
 
 // Typographic shared styles
 export const defaultTextStyle = `

@@ -132,11 +132,13 @@ const TypeGuide = () => (
 
         <TextSampleContainer>
             <SecondaryTitle>Headings</SecondaryTitle>
-            <DisplayText>The quick fox jumps over the lazy dog</DisplayText>
-            <H1Text>The quick fox jumps over the lazy dog</H1Text>
-            <H2Text>The quick fox jumps over the lazy dog</H2Text>
-            <H3Text>The quick fox jumps over the lazy dog</H3Text>
-            <LargeText>The quick fox jumps over the lazy dog</LargeText>
+            <DisplayText>
+                Display | The quick fox jumps over the lazy dog
+            </DisplayText>
+            <H1Text>H1 | The quick fox jumps over the lazy dog</H1Text>
+            <H2Text>H2 | The quick fox jumps over the lazy dog</H2Text>
+            <H3Text>H3 | The quick fox jumps over the lazy dog</H3Text>
+            <LargeText>Large | The quick fox jumps over the lazy dog</LargeText>
 
             <SecondaryTitle>Body text</SecondaryTitle>
             <DefaultText>The quick fox jumps over the lazy dog</DefaultText>

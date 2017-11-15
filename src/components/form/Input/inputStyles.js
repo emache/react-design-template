@@ -9,7 +9,7 @@ import {
 
 export const inputLabelStyle = `
     ${formLabelStyle};
-    margin-bottom: ${spacing.xs}px;
+    margin-bottom: ${spacing.xxs}px;
 `;
 
 export const inputStyle = `

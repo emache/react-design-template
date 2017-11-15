@@ -1,3 +1,4 @@
+/* @flow */
 import React from "react";
 import { View, Text } from "react-primitives";
 import styled from "styled-components/primitives";
@@ -23,7 +24,7 @@ const StyledInput = styled.Text`
                 return inputStyleFocus;
                 break;
             case "disabled":
-                return inputStyleDisabled;
+                return disabledTextStyle;
                 break;
             case "empty":
                 return disabledTextStyle;
