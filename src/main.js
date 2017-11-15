@@ -113,13 +113,13 @@ const DesignSystem = () => (
                 </Container>
             </Artboard>
         </Page>
+
+        <Page name="LoginForm">
+            <LoginForm />
+        </Page>
     </Document>
 );
 
 export default (context: any) => {
     render(<DesignSystem />, context.document.currentPage());
 };
-
-// <Page name="LoginForm">
-//             <LoginForm />
-//         </Page>

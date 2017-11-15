@@ -12,13 +12,13 @@ const StyledInput = styled.input`
 `;
 
 const InputWrapper = styled.div`
-    ${inputWrapperStyle}
+    ${inputWrapperStyle};
 `;
 
-export const Input = ({ label, value, children }: Props) => (
+export const Input = ({ label, value, children, placeholder }) => (
     <InputWrapper name="Input-field">
         <Label>{label}</Label>
-        <StyledInput defaultValue={value} placeholder="placeholder" />
+        <StyledInput defaultValue={value} placeholder={placeholder} />
     </InputWrapper>
 );
 

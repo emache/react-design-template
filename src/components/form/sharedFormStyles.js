@@ -16,7 +16,7 @@ export const formLabelStyle = `
     ${defaultTextStyle};
     ${boldText};
     text-transform: uppercase;
-    fontSize: ${fontSize.xs};
+    font-size: ${fontSize.xs}px;
     width: 300px;
 `;
 
@@ -28,6 +28,7 @@ export const containerStyleDefault = `
     box-sizing: border-box;
     border: 1px solid ${inputBorderColor};
     outline: none;
+    background-color: ${colors.white}
 `;
 
 export const containerStyleFocus = `
@@ -42,7 +43,7 @@ export const containerStyleDisabled = `
 `;
 
 export const formItemWrapper = `
-    margin-bottom: ${spacing.m}px;
+    margin-bottom: ${spacing.s}px;
 `;
 
 export const containerStyle = `
