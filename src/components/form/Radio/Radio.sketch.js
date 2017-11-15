@@ -2,7 +2,7 @@
 import React from "react";
 import { View, Text } from "react-primitives";
 import styled from "styled-components/primitives";
-import { disabledTextStyle } from "../../branding/designSystem";
+import { disabledTextStyle } from "../../../branding/designSystem";
 import {
     radioBoxStyle,
     radioWrapperStyle,

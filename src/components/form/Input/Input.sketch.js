@@ -8,7 +8,7 @@ import {
     inputStyle,
     inputLabelStyle
 } from "./inputStyles";
-import { disabledTextStyle } from "../../branding/designSystem";
+import { disabledTextStyle } from "../../../branding/designSystem";
 
 type Props = {
     label: string,

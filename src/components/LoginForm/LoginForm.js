@@ -31,7 +31,7 @@ export const LoginForm = () => (
             isSecondary="true"
             isInverted="true"
         />
-        <Radio value="test option" name="group2">
+        <Radio value="test option" name="group">
             Test Radio button
         </Radio>
         <Radio value="test option2" name="group" state="checkedDisabled">

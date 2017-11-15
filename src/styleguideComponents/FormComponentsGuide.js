@@ -4,8 +4,9 @@ import { View } from "react-sketchapp";
 import { spacing } from "../branding/designSystem";
 import { sectionStyle } from "./sharedStyles";
 import styled from "styled-components/primitives";
-import Input from "../components/Input/Input";
-import Radio from "../components/Radio/Radio";
+import Input from "../components/form/Input/Input";
+import Radio from "../components/form/Radio/Radio";
+import Checkbox from "../components/form/Checkbox/Checkbox";
 
 const Section = styled.View`
     ${sectionStyle};
@@ -54,6 +55,9 @@ export default () => (
             <Radio value="" name="radio-checked" state="checkedDisabled">
                 Radio button, checked disabled
             </Radio>
+            <Checkbox value="">
+                Checkbox, unchecked
+            </Checkbox>
         </Col>
     </Section>
 );

@@ -1,21 +1,20 @@
 // checkbox styles
 import {
     colors,
-    spacing,
     defaultTextStyle,
     disabledTextStyle
 } from "../../../branding/designSystem";
 import tinycolor from "tinycolor2";
 
 const checkboxSize = 20;
-const innerSize = checkboxSize / 2;
-
 const unselectedColor = colors.grey70;
 const unselectedColorHover = tinycolor(unselectedColor).darken(10);
 const selectedColor = colors.accent.base;
 const selectedColorHover = colors.accent.darker;
 const disabledColor = colors.grey30;
 const innerColor = colors.white;
+const tickWidth = 2;
+
 
 const labelTextStyle = `
     ${defaultTextStyle};
@@ -34,12 +33,12 @@ export const checkboxStyle = `
         opacity: 1;
         position: absolute;
         display: block;
-        top: 4px;
-        left: 8px;
-        width: 3px;
-        height: 8px;
+        top:${checkboxSize/6}px;
+        left: ${3*checkboxSize/8}px;
+        width: ${(checkboxSize/4)-tickWidth}px;
+        height: ${(checkboxSize/2)-tickWidth}px;
         border: solid ${innerColor};
-        border-width: 0 2px 2px 0;
+        border-width: 0 ${tickWidth}px ${tickWidth}px 0;
         transform: rotate(45deg);
     }
 `;
@@ -84,14 +83,14 @@ export const checkboxWrapperStyle = `
     }
 }`;
 
-// Rendering things for Sketc
+// Rendering things for Sketch
 
 export const checkboxHoverSketch = `
     border: 0;
     background: ${unselectedColorHover};
 `;
 
-export const radioDisabledSketch = `
+export const checkboxDisabledSketch = `
     border: 0;
     background: ${disabledColor};
 `;

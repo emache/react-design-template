@@ -1,18 +1,15 @@
-/* @flow */
 import React from "react";
 import { View, Text } from "react-primitives";
 import styled from "styled-components/primitives";
-import { disabledTextStyle } from "../../branding/designSystem";
+import { disabledTextStyle } from "../../../branding/designSystem";
+import TickIcon from "../../icons/Tick";
 import {
     checkboxStyle,
     checkboxWrapperStyle,
     checkboxHoverSketch,
     checkboxDisabledSketch,
 } from "./checkboxStyles";
-type Props = {
-    state: string,
-    children?: React$Element<any>
-};
+
 
 const CheckboxBox = styled.View`
     ${checkboxStyle};
@@ -31,11 +28,12 @@ const CheckboxBox = styled.View`
 const StyledCheckbox = styled.Text`
     ${checkboxWrapperStyle};
     ${({ state }) =>
-        state === "disabled" || "checkedDisabled" ? disabledTextStyle : ""};
+        state === "disabled" ? disabledTextStyle : ""};
 `;
 
+
 export const Checkbox = ({ children, state }: Props) => (
-    <StyledCheckbox name="Radio-button" state={state}>
+    <StyledCheckbox name="checkbox" state={state}>
         {children}
         <CheckboxBox state={state} />
     </StyledCheckbox>
