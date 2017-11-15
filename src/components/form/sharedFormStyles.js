@@ -33,6 +33,7 @@ export const containerStyleFocus = `
 export const containerStyleDisabled = `
     background-color: ${colors.grey30};
     border-color: ${colors.grey70};
+    pointer-events: none;
 `;
 
 export const formItemWrapper = `
@@ -63,3 +64,5 @@ export const containerStyleError = `
 export const containerStyleSucess = `
     border-color: ${colors.success.base};
 `;
+
+

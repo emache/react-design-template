@@ -5,10 +5,12 @@ import {
     disabledTextStyle
 } from "../../../branding/designSystem";
 import tinycolor from "tinycolor2";
+import { inputBorderColor, inputBorderColorFocus, containerStyle, containerStyleFocus,
+    formLabelStyle, formItemWrapper,containerStyleDisabled } from "../sharedFormStyles";
 
 const checkboxSize = 20;
-const unselectedColor = colors.grey70;
-const unselectedColorHover = tinycolor(unselectedColor).darken(10);
+const unselectedColor = inputBorderColor;
+const unselectedColorHover = inputBorderColorFocus;
 const selectedColor = colors.accent.base;
 const selectedColorHover = colors.accent.darker;
 const disabledColor = colors.grey30;
@@ -18,7 +20,6 @@ const tickWidth = 2;
 
 const labelTextStyle = `
     ${defaultTextStyle};
-    margin-bottom: 15px;
 `;
 
 export const checkboxStyle = `
@@ -27,7 +28,8 @@ export const checkboxStyle = `
     left: 0;
     height: ${checkboxSize}px;
     width: ${checkboxSize}px;
-    background: ${unselectedColor};
+    ${containerStyle};
+    box-sizing: content-box;
     &:after {
         content: "";
         opacity: 1;
@@ -54,24 +56,26 @@ export const checkboxWrapperStyle = `
     cursor: pointer;
     line-height: ${checkboxSize}px;
     ${labelTextStyle}
+    ${formItemWrapper}
 
     &:hover input ~ div,
     input:focus ~ div {
-        background: ${unselectedColorHover};
+        ${containerStyleFocus};
     }
 
     input:checked ~ div {
         background: ${selectedColor};
+        border: ${selectedColor};
     }
 
     &:hover input:not([disabled]):checked ~ div,
     input:checked:focus ~ div {
         background: ${selectedColorHover};
+        border: ${selectedColorHover};
     }
 
     input:disabled ~ div {
-        background: ${disabledColor};
-        pointer-events: none;
+        ${containerStyleDisabled}
     }
 
     input:disabled {
