@@ -1,6 +1,6 @@
 import React from "react";
 import { View } from "react-sketchapp";
-import SwatchNoShade from "./SwatchNoShade";
+import Swatch from "./Swatch";
 import { paletteStyle } from "./sharedStyles";
 import styled from "styled-components/primitives";
 
@@ -11,7 +11,7 @@ const PaletteNoShade = styled.View`
 export default ({ color, name }) => (
     <PaletteNoShade name={name}>
         {Object.keys(color).map(colorName => (
-            <SwatchNoShade
+            <Swatch
                 color={color[colorName]}
                 name={colorName}
                 key={colorName}

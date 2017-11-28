@@ -46,24 +46,39 @@ export const AnnotationWrapper = styled.View`
     padding: 20px 0 0 20px;
 `;
 
-export default ({ color, name }) => (
-    <Swatch name={`swatch-${name}`}>
-        <View name="color-chips">
-            <LargeColorChip name="color-base" bgcolor={color.base} />
-            <SmallColorChipWrapper>
-                <SmallColorChip name="lighter" bgcolor={color.lighter} />
-                <SmallColorChip name="darker" bgcolor={color.darker} />
-            </SmallColorChipWrapper>
-        </View>
-        <AnnotationWrapper name="labels">
-            <LargeAnnotation>{name}</LargeAnnotation>
-            <Annotation>Base color: {color.base}</Annotation>
-            <Annotation>
-                {name}.lighter: {color.lighter}
-            </Annotation>
-            <Annotation>
-                {name}.darker: {color.darker}
-            </Annotation>
-        </AnnotationWrapper>
-    </Swatch>
-);
+export default ({ color, name }) => {
+  if (typeof(color) === 'object'){
+    return (
+        <Swatch name={`swatch-${name}`}>
+            <View name="color-chips">
+                <LargeColorChip name="color-base" bgcolor={color.base} />
+                <SmallColorChipWrapper>
+                    <SmallColorChip name="lighter" bgcolor={color.lighter} />
+                    <SmallColorChip name="darker" bgcolor={color.darker} />
+                </SmallColorChipWrapper>
+            </View>
+            <AnnotationWrapper name="labels">
+                <LargeAnnotation>{name}</LargeAnnotation>
+                <Annotation>Base color: {color.base}</Annotation>
+                <Annotation>
+                    {name}.lighter: {color.lighter}
+                </Annotation>
+                <Annotation>
+                    {name}.darker: {color.darker}
+                </Annotation>
+            </AnnotationWrapper>
+        </Swatch>
+    );
+  }
+  else if (typeof(color) === 'string') {
+    return (
+      <Swatch name={`swatch-${name}`}>
+          <LargeColorChip bgcolor={color} />
+          <AnnotationWrapper name="labels">
+              <LargeAnnotation>{name}</LargeAnnotation>
+              <Annotation>Base color: {color}</Annotation>
+          </AnnotationWrapper>
+      </Swatch>
+    )
+  }
+}
