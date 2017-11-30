@@ -35,7 +35,6 @@ export const brandColors = {
 };
 
 export const greyScale = {
-    Black: "#000000",
     Grey45: "#626772",
     Grey59: "#828897",
     Grey78: "#B3B9C7",

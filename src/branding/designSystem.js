@@ -12,7 +12,6 @@ export const colors = {
     warning: brandColors.Lemon,
     failure: brandColors.Tomato,
     primaryText: brandColors.Night.base,
-    black: greyScale.Black,
     grey45: greyScale.Grey45,
     grey59: greyScale.Grey59,
     grey78: greyScale.Grey78,

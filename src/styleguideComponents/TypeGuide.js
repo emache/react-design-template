@@ -103,7 +103,7 @@ const FontChip = styled.View`
 
 const Sample = styled.Text`
     font-family: ${props => props.font};
-    color: ${colors.black};
+    color: ${colors.grey45};
     font-size: ${fontSize.display};
 `;
 
