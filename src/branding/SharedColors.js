@@ -36,10 +36,6 @@ export const brandColors = {
 
 export const greyScale = {
     Black: "#000000",
-    Grey70: "rgba(47,49,55,0.70)",
-    Grey30: "rgba(47,49,55,0.30)",
-    Grey10: "rgba(47,49,55,0.10)",
-    Grey3: "rgba(47,49,55,0.50)",
     Grey45: "#626772",
     Grey59: "#828897",
     Grey78: "#B3B9C7",

@@ -21,7 +21,7 @@ const unselectedColor = inputBorderColor;
 const unselectedColorHover = inputBorderColorFocus;
 const selectedColor = colors.accent.base;
 const selectedColorHover = colors.accent.darker;
-const disabledColor = colors.grey30;
+const disabledColor = colors.grey84;
 const innerColor = colors.white;
 const tickWidth = 2;
 

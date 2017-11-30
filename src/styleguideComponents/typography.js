@@ -11,16 +11,16 @@ import {
 
 const TitleText = styled.Text`
     ${displayTextStyle};
-    color: ${colors.grey70};
+    color: ${colors.grey45};
     width: 1200px;
     padding-bottom: ${spacing.s}px;
     margin: ${spacing.m}px 0;
-    border-top: 2px solid ${colors.grey70};
+    border-top: 2px solid ${colors.grey45};
 `;
 
 const SecondaryTitleText = styled.Text`
     ${h2TextStyle};
-    color: ${colors.grey70};
+    color: ${colors.grey45};
     margin-bottom: ${spacing.m}px;
     padding-bottom: ${spacing.xs}px;
 `;

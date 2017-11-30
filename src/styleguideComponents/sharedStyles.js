@@ -16,7 +16,7 @@ export const fontChipStyle = `
     width: 250px;
     height: 150px;
     padding: ${spacing.xs}px;
-    border: 1px solid ${colors.grey70};
+    border: 1px solid ${colors.grey45};
     align-items: center;
     margin-right: ${spacing.m}px;
 `;
