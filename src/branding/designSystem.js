@@ -23,15 +23,16 @@ export const colors = {
     white: greyScale.White
 };
 
-// The core colors are only created for the purpose of generating a Palette in the style guide
-export const coreColors = {
-    primary: brandColors.Aquamarine,
-    secondary: brandColors.Sky,
-    accent: brandColors.Lilac,
-    success: brandColors.Pear,
-    warning: brandColors.Lemon,
-    failure: brandColors.Tomato
+// Text colors only
+export const textColors = {
+    primary: colors.black,
+    secondary: colors.grey,
+    accent: colors.primary.base,
+    success: colors.success.darker,
+    warning: colors.warning.darker,
+    failure: colors.failure.darker
 };
+
 
 // Global font and typography settings
 export const fontFamilies = {
