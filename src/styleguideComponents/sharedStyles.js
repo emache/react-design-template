@@ -8,7 +8,7 @@ export const paletteStyle = `
     display: flex;
     flex-wrap: wrap;
     flex-direction: row;
-    justify-content: space-between;
+    justify-content: flex-start;
     padding: 0;
 `;
 

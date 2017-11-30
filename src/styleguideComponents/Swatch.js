@@ -2,7 +2,7 @@ import React from "react";
 import { View, Text } from "react-sketchapp";
 import styled from "styled-components/primitives";
 
-const ColorChipSize = 100;
+const colorChipSize = 100;
 
 export const Swatch = styled.View`
     border: 1px solid #000000;
@@ -14,21 +14,21 @@ export const Swatch = styled.View`
 `;
 
 export const LargeColorChip = styled.View`
-    width: ${ColorChipSize};
-    height: ${ColorChipSize};
+    width: ${colorChipSize};
+    height: ${colorChipSize};
     background-color: ${props => props.bgcolor};
 `;
 
 const SmallColorChip = styled.View`
-    width: ${ColorChipSize / 2};
-    height: ${ColorChipSize / 2};
+    width: ${colorChipSize / 2};
+    height: ${colorChipSize / 2};
     background-color: ${props => props.bgcolor};
 `;
 
 const SmallColorChipWrapper = styled.View`
     display: flex;
     flex-direction: row;
-    height: ${ColorChipSize / 2};
+    height: ${colorChipSize / 2};
 `;
 export const Annotation = styled.Text`
     color: #000000;
