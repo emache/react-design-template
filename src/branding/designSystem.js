@@ -24,8 +24,13 @@ export const colors = {
 
 // Text colors only
 export const textColors = {
-    primary: colors.black,
-    secondary: colors.grey,
+    primary: brandColors.Night.base,
+    secondary: tinycolor(brandColors.Night.base)
+      .setAlpha(0.8)
+      .toRgbString(),
+    disabled: tinycolor(brandColors.Night.base)
+      .setAlpha(0.5)
+      .toRgbString(),
     accent: colors.primary.base,
     success: colors.success.darker,
     warning: colors.warning.darker,
@@ -79,15 +84,15 @@ export const boldText = `
     font-weight: ${fontWeights.bold};
 `;
 export const primaryTextStyle = `
-    color: ${colors.primaryText} `;
+    color: ${textColors.primary} `;
 
 export const secondaryTextStyle = `
-    color: ${tinycolor(colors.primaryText)
+    color: ${tinycolor(textColors.primary)
         .setAlpha(0.8)
         .toRgbString()} `;
 
 export const disabledTextStyle = `
-    color: ${tinycolor(colors.primaryText)
+    color: ${tinycolor(textColors.primary)
         .setAlpha(0.5)
         .toRgbString()}; `;
 
@@ -99,7 +104,7 @@ export const linkStyleHover = `
     color: ${colors.accent.darker}
 `;
 export const linkStyle = `
-    color: ${colors.primaryText};
+    color: ${textColors.primary};
     text-decoration: underline;
 
     &:hover {

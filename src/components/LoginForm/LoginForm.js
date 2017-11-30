@@ -3,6 +3,7 @@ import { View, Text } from "react-primitives";
 import styled from "styled-components";
 import {
     colors,
+    textColors,
     spacing,
     h3TextStyle,
     fontSize
@@ -39,7 +40,7 @@ export const LoginForm = () => (
                 fontSize: fontSize.xl,
                 fontFamily: "arial",
                 fontWeight: "bold",
-                color: colors.primaryText,
+                color: textColors.primary,
                 marginBottom: spacing.s
             }}
         >

@@ -8,7 +8,7 @@ import TypeGuide from "./styleguideComponents/TypeGuide";
 import FormComponentsGuide from "./styleguideComponents/FormComponentsGuide";
 import ButtonsGuide from "./styleguideComponents/ButtonsGuide";
 import LoginForm from "./components/LoginForm/LoginForm";
-import { fonts, coreColors, spacing, colors } from "./branding/designSystem";
+import { fonts, spacing, colors, textColors } from "./branding/designSystem";
 import { brandColors, greyScale} from "./branding/sharedColors";
 import {
     Annotation,
@@ -73,6 +73,10 @@ const DesignSystem = () => (
                     <Section title="Color usage">
                         <SecondaryTitle>UI colors</SecondaryTitle>
                         <Palette color={colors} name="Color usage" />
+                    </Section>
+                    <Section title="Text">
+                        <SecondaryTitle>Text Colors</SecondaryTitle>
+                        <Palette color={textColors} name="Color usage" />
                     </Section>
                 </Container>
             </Artboard>
