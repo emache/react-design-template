@@ -4,13 +4,12 @@
 import React from "react";
 import { render, View, Artboard, Page, Document } from "react-sketchapp";
 import Palette from "./styleguideComponents/Palette";
-import PaletteNoShade from "./styleguideComponents/PaletteNoShade";
 import TypeGuide from "./styleguideComponents/TypeGuide";
 import FormComponentsGuide from "./styleguideComponents/FormComponentsGuide";
 import ButtonsGuide from "./styleguideComponents/ButtonsGuide";
 import LoginForm from "./components/LoginForm/LoginForm";
-import { fonts, coreColors, spacing } from "./branding/designSystem";
-import { brandColors, greyScale } from "./branding/sharedColors";
+import { fonts, coreColors, spacing, colors } from "./branding/designSystem";
+import { brandColors, greyScale} from "./branding/sharedColors";
 import {
     Annotation,
     Title,
@@ -38,15 +37,22 @@ const DesignSystem = () => (
             >
                 <GuideHeader title="Brand colors">
                     Each color in the sharedColors file includes a lighter, base
-                    and darker shade. If lighter or darker shades aren't
+                    and darker shade. If lighter or darker shades aren{"'"}t
                     specified manually, we generate them automatically.
                 </GuideHeader>
 
-                <Container title="Brand colors">
+                <Container>
+                  <Section title="Brand colors">
                     <SecondaryTitle>Brand colors</SecondaryTitle>
                     <Palette color={brandColors} name="Brand colours" />
+                  </Section>
+                  <Section title="Grey palette">
+                    <SecondaryTitle>Grey palette</SecondaryTitle>
+                    <Palette color={greyScale} name="Grey palette" />
+                  </Section>
                 </Container>
             </Artboard>
+
             <Artboard
                 name="02 UI Colors"
                 style={{ position: "absolute", left: 1540, top: 0 }}
@@ -66,11 +72,7 @@ const DesignSystem = () => (
                 <Container>
                     <Section title="Color usage">
                         <SecondaryTitle>UI colors</SecondaryTitle>
-                        <Palette color={coreColors} name="Color usage" />
-                    </Section>
-                    <Section title="Grey palette">
-                        <SecondaryTitle>Grey palette</SecondaryTitle>
-                        <PaletteNoShade color={greyScale} name="Grey palette" />
+                        <Palette color={colors} name="Color usage" />
                     </Section>
                 </Container>
             </Artboard>

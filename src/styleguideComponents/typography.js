@@ -27,8 +27,14 @@ const SecondaryTitleText = styled.Text`
 
 export const Annotation = styled.Text`
     ${secondaryTextStyle};
-    margin-bottom: ${spacing.m}px;
-    width: 700px;
+    margin-bottom: ${spacing.xxs}px;
+    max-width: 700px;
+`;
+
+export const LargeAnnotation = styled.Text`
+    font-size: 20px;
+    font-weight: bold;
+    margin-bottom: ${spacing.xxs}px;
 `;
 
 export const Title = ({ children }) => (
