@@ -1,6 +1,7 @@
 import React from "react";
 import { View, Text } from "react-sketchapp";
 import styled from "styled-components/primitives";
+import { Annotation, LargeAnnotation, Title, SecondaryTitle } from "./typography";
 
 const colorChipSize = 100;
 
@@ -29,17 +30,6 @@ const SmallColorChipWrapper = styled.View`
     display: flex;
     flex-direction: row;
     height: ${colorChipSize / 2};
-`;
-export const Annotation = styled.Text`
-    color: #000000;
-    font-size: 12px;
-    font-family: Arial;
-    margin-bottom: 10px;
-`;
-
-export const LargeAnnotation = styled.Text`
-    ${Annotation} font-size: 18px;
-    font-weight: bold;
 `;
 
 export const AnnotationWrapper = styled.View`
