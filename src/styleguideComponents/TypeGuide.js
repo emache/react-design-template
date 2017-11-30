@@ -1,6 +1,7 @@
 import React from "react";
 import { View, Text } from "react-sketchapp";
 import styled from "styled-components/primitives";
+import Palette from "./Palette";
 import { fontChipStyle } from "./sharedStyles";
 import { SecondaryTitle } from "./typography";
 import {
@@ -22,8 +23,10 @@ import {
     linkStyle,
     successTextStyle,
     warningTextStyle,
-    failureTextStyle
+    failureTextStyle,
+    textColors
 } from "../branding/designSystem";
+import Section from "./Section";
 
 const DisplayText = styled.Text`
     ${displayTextStyle};
@@ -129,6 +132,10 @@ const TypeGuide = () => (
                 <Legend>Body font: {fontFamilies.body}</Legend>
             </FontChip>
         </FontChipContainer>
+        <Section title="Text">
+            <SecondaryTitle>Text Colors</SecondaryTitle>
+            <Palette color={textColors} name="Color usage" />
+        </Section>
 
         <TextSampleContainer>
             <SecondaryTitle>Headings</SecondaryTitle>
