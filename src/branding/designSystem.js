@@ -50,18 +50,18 @@ const fontWeights = {
 };
 
 // Base font size
-const baseFontSize = 16;
+const baseFontSize = 20;
 
 // Sizes
 export const fontSize = {
-    xs: baseFontSize * 0.625, // 10
-    s: baseFontSize * 0.75, // 12
-    body: baseFontSize * 0.875, // 14
-    l: baseFontSize, // 16
-    xl: baseFontSize * 1.5, // 24
-    xxl: baseFontSize * 2, // 32
-    xxxl: baseFontSize * 2.625, // 42
-    display: baseFontSize * 3 // 48
+    xs: baseFontSize * 0.625, // 10 if using a 16px base
+    s: baseFontSize * 0.75, // 12 if using a 16px base
+    body: baseFontSize * 0.875, // 14 if using a 16px base
+    l: baseFontSize, // 16 if using a 16px base
+    xl: baseFontSize * 1.5, // 24 if using a 16px base
+    xxl: baseFontSize * 2, // 32 if using a 16px base
+    xxxl: baseFontSize * 2.625, // 42 if using a 16px base
+    display: baseFontSize * 3 // 48 if using a 16px base
 };
 
 // Spacing, based off the base font-size.
